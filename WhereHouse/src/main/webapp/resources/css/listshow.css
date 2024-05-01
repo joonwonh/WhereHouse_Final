@@ -1,58 +1,144 @@
 @charset "UTF-8";
-
-body {
-
-    position: relative;
-
-    background-image: url("./../images/city10.jpg");
-    background-size: cover;
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
 }
 
 
 .title {
-
     position: relative;
     top: 10%;
     left: 40%;
 }
 
-#boardtable {
-
+#listLogo   {
+    font-family: 'Courgette', cursive;
     position: relative;
-    top: 10%;
-    width: 75%;
-
-    margin: auto;
+    width: 500px;
+    left: 480px;
+    top: 120px;
+    font-size: 2.5rem;
+    line-height: 10px;
+    text-decoration-line: none;
+    color: inherit;
 }
 
+#wirteRule  {
+    width: 300px;
+    border: rgba(11, 94, 215, 0.50) 2px solid;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-left: 12px;
+    margin-right: 10px;
+    text-align: center;
+    height: 350px;
+}
+
+#writeRuleHead  {
+    line-height: 40px;
+    font-size: 1.08rem;
+}
+
+.gu_name_hr {
+    background: rgba(11, 94, 215, 0.50);
+    height: 2px;
+    border: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#writePage  {
+    width: 300px;
+    border: rgba(11, 94, 215, 0.50) 2px solid;
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-left: 12px;
+    margin-right: 10px;
+    text-align: center;
+    height: 50px;
+}
+
+#writePageBtn   {
+    background-color: transparent;
+    border: none;
+    line-height: 46px;
+    font-size: 1.05rem;
+
+}
+
+.showlist   {
+    position: relative;
+    width: 1200px;
+    left: 480px;
+    top: 180px;
+    text-align: center;
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+#listNo {
+    width: 50px;
+}
+#listHead   {
+    width: 700px;
+}
+#clickTitle	{
+	text-decoration-line: none;
+    color: inherit;
+}
+#clickTitle:hover		{
+	color: #0B5ED7;
+}
+
+#listNickName   {
+    width: 120px;
+}
+#listGu {
+    width: 110px;
+}
+#listHit    {
+    width: 60px;
+}
+#listDate    {
+    width: 130px;
+}
+
+#listMain   {
+    font-family: 'SUITE-Regular';
+}
+
+#pageButton {
+    background-color: white;
+    border: none;
+}
+#pageButton:hover   {
+    color: #0B5ED7;
+    /* border: solid 1px #0B5ED7; */
+}
 
 .paginationbtn {
-
     display: flex;
     justify-content: space-center;
-
-    width: 12%;
-
+    width: 52%;
     position: absolute;
-    left: 50%;
+    left: 48%;
+    border: 0px solid red;
+    
 }
 
 .paginationbtn>button {
-
-    border: 0px solid black;
+    border: 0px solid red;
     width: auto;
-
     font-size: 20px;
     margin-right: 10px;
+    
 }
 
 /* "글 작성" 버튼 */
 .writebtntbl {
-
     border: 0px solid black;
-
     width: auto;
-
     position: relative;
     left: 13%;
     top: 3vh;
@@ -60,7 +146,6 @@ body {
 
 .writebtntbl>.writebtn {
     background-color: blue;
-
     font-size: 10px;
     width: auto;
 }

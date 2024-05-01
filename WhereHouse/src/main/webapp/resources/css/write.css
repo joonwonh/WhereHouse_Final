@@ -1,53 +1,105 @@
 @charset "UTF-8";
 
-body {
-
-    position: relative;
-
-    background-image: url("./../images/city10.jpg");
-    background-size: cover;
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
 }
 
-/* 게시판 머릿말 */
-h1 {
+@font-face {
+    font-family: 'TheJamsil2Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil2Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
 
-    text-align: center;
-    width: 60%;
-
+#listLogo   {
+    font-family: 'Courgette', cursive;
     position: absolute;
-    top: 40px;
-    left: 20%;
+    width: 500px;
+    font-size: 2.5rem;
+    line-height: 10px;
+    margin-top: -50px;
+    text-decoration-line: none;
+    color: inherit;
+    border: 0px solid red;
 }
 
-/* 게시글 쓰는 테이블 조정 */
-.writetbl {
-
-    border: 1px solid #d2d2d2;
-    width: 60%;
-
+#writeMain {
     position: absolute;
-    top: 80px;
-    left: 20%;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    width: 1000px;
+    top: 140px;
+    left: 500px;
+    padding-bottom: 18px;
 }
 
-
-/* 게시글 작성 테이블 내 제목 항목의 textarea*/
-.title {
-
-    width: 100%;
-    height: 100%;
+.writeSection1  {
+    border: 0px solid red;
+    width: 1000px;
+    height: 50px;
+    padding: 10px;
+}
+#writeTitle1    {
+    font-size: 1.2rem;
+    padding-left: 30px;
+    padding-right: 45px;
 }
 
-.bcontent {
-
-    width: 100%;
-    height: 100%;
+#writeTitle2    {
+    font-family: 'TheJamsil2Light';
+    width: 655px;
+    height: 40px;
+    resize: none;
+    font-size: 1.2rem;
+    line-height: 38px;
+    margin-top: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border-color: #d2d2d2;
+    
+}
+#writeTitle2:focus {
+    outline: none;
 }
 
-.narrow {
-    background-color: #d2d2d2;
+.writeSection2  {
+    border: 0px solid red;
+    width: 1000px;
+    height: 50px;
+}
+#writeCont1 {
+    font-size: 1.2rem;
+    padding-left: 35px;
+    /* padding-right: 45px; */
+}
 
-    text-align: center;
-    width: 12%;
-    /* 원하는 넓이로 조정. */
+#writecont2 {
+    font-family: 'TheJamsil2Light';
+    width: 655px;
+    margin-left: 52px;
+    height: 550px;
+    resize: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-color: #d2d2d2;
+}
+#writecont2:focus {
+    outline: none;
+}
+
+#writeBtn   {
+    font-family: 'TheJamsil5Bold';
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgb(174, 174, 174);
+    background-color: #5699ffd0;
+    color: white;
+    width: 160px;
+    height: 50px;
+    margin-top: 495px;
+    margin-right: 10px;
+    cursor: pointer;
 }

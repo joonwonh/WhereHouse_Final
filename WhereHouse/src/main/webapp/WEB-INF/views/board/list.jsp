@@ -10,8 +10,9 @@
 
          <head>
             <meta http-equiv="Content-Type" charset="text/html;charset=UTF-8">
-
-            <!-- 부트 스트랩 -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+   			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kdam+Thmor+Pro&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                crossorigin="anonymous">
@@ -24,33 +25,47 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             <script src="https://kit.fontawesome.com/09b067fdc5.js" crossorigin="anonymous"></script>
-            <link rel="stylesheet" href="/wherehouse/css/list.css?ver=123">
-            <link rel="stylesheet" href="/wherehouse/css/listshow.css">
-            <!-- <script src="js/list.js?ver=123"></script> 패널 열고 닫는 버튼 사용하지 않음. -->
+            <link rel="stylesheet" href="/wherehouse/css/list.css?ver=125">
+            <link rel="stylesheet" href="/wherehouse/css/listshow.css?ver=125">
+            <script src="js/list.js?ver=123"></script> 
 
          </head>
 
-         <body>
-
-            <h1 class="title">WhereHouse 게시판</h1>
-            <!-- 게시판 목록 보여주는 화면. -->
+         <body> 
+         
+   <aside id="side-bar">
+      <div class="board-info">
+         자유 게시판
+      </div>
+      <div id="wirteRule">
+         <div id="writeRuleHead">작성 규칙!</div> 
+         <hr class="gu_name_hr">
+      </div>
+      <div id="writePage">
+         <button type="button" onclick="writepage()" id="writePageBtn">글 작성하러 가기!</button>
+      </div>
+      <div id="logo-img"><img src="../images/home_icon.png" alt=""></div>
+   </aside>
+            
+            <p id="listLogo">Where House</p>
             <div class="showlist">
-               <table id="boardtable" class="table table-bordered border-dark">
+               <table id="boardtable" class="table">
                   <thead>
-                     <tr class=" table-primary">
-                        <th scope="col">글번호</th>
-                        <th scope="col">제목</th>
-                        <th scope="col">닉네임</th>
-                        <th scope="col">지역구</th>
-                        <th scope="col">조회수</th>
-                        <th scope="col">날짜</th>
+                     <tr class="">
+                        <th scope="col" id="listNo">No.</th>
+                        <th scope="col" id="listHead">제목</th>
+                        <th scope="col" id="listNickName">글쓴이</th>
+                        <th scope="col" id="listGu">지역구</th>
+                        <th scope="col" id="listHit">조회수</th>
+                        <th scope="col" id="listDate">날짜</th>
                      </tr>
                   </thead>
-                  <tbody>
+                  
+                  <tbody id="listMain">
                      <c:forEach var="boardList" items="${boardList}" varStatus="status">
                         <tr>
                            <td>${boardList.contentnum}</td>
-                           <td><a href="../writeboard/${boardList.contentnum}">${boardList.title}</a></td>
+                           <td><a href="../writeboard/${boardList.contentnum}" id="clickTitle">${boardList.title}</a></td>
                            <td>${members[status.index]}</td>
                            <td>${boardList.region}</td>
                            <td>${boardList.hit}</td>
@@ -59,15 +74,18 @@
                      </c:forEach>
                   </tbody>
                </table>
+              
                <input type="hidden" class="nickname" value="<%=nickname %>">
+                <!-- 
                <table class="writebtntbl">
                   <tr>
                      <td class="writebtn" colspan="5"><button type="button" onclick="writepage()">글 작성</button></td>
                   </tr>
                </table>
+                -->
                <div class="paginationbtn">
                   <c:forEach var="i" begin="1" end="<%=pnSize %>">
-                   <button class="${i}">${i}</button>
+                   <button class="${i}" id="pageButton">${i}</button>
                   </c:forEach>
                </div>
             </div>   

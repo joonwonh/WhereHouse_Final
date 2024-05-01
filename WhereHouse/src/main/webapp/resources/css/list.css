@@ -13,7 +13,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 #information {
@@ -25,7 +25,7 @@ body {
     transition: 500ms;
 }
 
-/* 사이드 버튼 */
+
 #btn {
     position: absolute;
     width: 33px;
@@ -49,9 +49,8 @@ body {
     font-size: 13px;
 }
 
-/* 사이드 바 */
 #side-bar {
-    position: absolute;
+    position: fixed;
     /* border: 2px solid #0B5ED7; */
     background: white;
     width: 333px;
@@ -59,7 +58,6 @@ body {
     box-shadow: 1px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* 게시판 제목 */
 .board-info {
     background: #4690ff;
     color: #e9f2ff;
@@ -69,11 +67,10 @@ body {
     line-height: 62px;
     text-align: center;
     font-weight: bold;
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* 세션 닉네임 */
 .board-nickName {
     width: 300px;
     border: rgba(11, 94, 215, 0.50) 2px solid;
@@ -86,3 +83,12 @@ body {
     line-height: 50px;
     font-size: 1.7rem;
 }
+
+#logo-img img  {
+    width: 110px;
+    position: absolute;
+    top: 780px;
+    left: 110px;
+    
+}
+

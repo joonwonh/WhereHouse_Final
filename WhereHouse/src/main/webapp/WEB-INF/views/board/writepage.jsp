@@ -6,31 +6,44 @@
 
 		<meta http-equiv="Content-Type" charset="text/html;charset=UTF-8">
 		<script language="JavaScript" src="./js/writedo.js"></script>
-		<title>Insert title here</title>
+		<title>WhereHouse</title>
 		<link rel="stylesheet" href="css/list.css?ver=123">
-		<link rel="stylesheet" href="./css/write.css">
+		<link rel="stylesheet" href="./css/write.css?ver=123">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+		href="https://fonts.googleapis.com/css2?family=Courgette&family=Kdam+Thmor+Pro&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300&display=swap"
+		rel="stylesheet">
 	</head>
 
 	<body>
-		<table border="1" class="writetbl">
-			<form action="./writeboard" name="writefrm" method="post">
-				<input type="hidden" name="id" value="${sessionScope.id}">
-				<h1>WhereHouse 글 쓰기</h1>
-				<tr>
-					<td class="narrow">이름</td>
-					<td>${sessionScope.nickname}</td>
-				</tr>
+	   <aside id="side-bar">
+	      <div class="board-info">
+	         자유 게시판
+	      </div>
+	      <div id="wirteRule">
+	         <div id="writeRuleHead">작성 규칙!</div> 
+	         <hr class="gu_name_hr">
+	      </div>
+	      <a href="/wherehouse/page/list">목록으로 돌아가기</a>
+	      <div id="writePage">
+	         <button type="button" onclick="writepage()" id="writePageBtn">글 작성하러 가기!</button>
+	      </div>
+	      <div id="logo-img"><img src="../images/home_icon.png" alt=""></div>
+   </aside>
+	
+	<div id="writeMain">
 
+		<form action="./writeboard" name="writefrm" method="post">
+			<input type="hidden" name="id" value="${sessionScope.id}">
+			<a id="listLogo">Where House</a>
+
+			<table class="writeSection1">
 				<tr>
-					<td class="narrow">제목</td>
-					<td><textarea name="title" class="title" rows="1" cols="50"></textarea></td>
-				</tr>
-				<tr>
-					<td class="narrow">
-						<label for="regions">지역 선택하세요</label>
-					</td>
+					<td id="writeTitle1">제목</td>
+					<td><textarea name="title" class="title" rows="1" cols="50" id="writeTitle2"></textarea></td>
 					<td>
-						<select name="regions" class="regions">
+						<select style="cursor: pointer;" name="regions" class="regions">
 							<option value="선택 지역 없음">지역구를 선택해주세요</option>
 							<option value="강남구">강남구</option>
 							<option value="강동구">강동구</option>
@@ -60,15 +73,17 @@
 						</select>
 					</td>
 				</tr>
+			</table>
+
+			<table class="writeSection2">
 				<tr>
-					<td class="narrow">내용</td>
-					<td><textarea name="bcontent" class="bcontent" rows="15" cols="50"></textarea></td>
+					<td id="writeCont1">내용</td>
+					<td><textarea name="bcontent" class="bcontent" rows="15" cols="50" id="writecont2"></textarea></td>
+					<td><input type="button" onclick="writedo()" value="작성하기" id="writeBtn"></td>
 				</tr>
-				<tr>
-					<td colspan="2"><input type="button" onclick="writedo()" value="글 쓰기 완료">&nbsp;&nbsp;<a href="/wherehouse/page/list">목록으로 돌아가기</a></td>
-				</tr>
-			</form>
-		</table>
+			</table>
+		</form>
+	</div>
 	</body>
 
 	</html>
