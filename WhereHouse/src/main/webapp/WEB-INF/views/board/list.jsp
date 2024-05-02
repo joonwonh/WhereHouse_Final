@@ -21,12 +21,13 @@
                crossorigin="anonymous"></script>
 
             <script language="JavaScript" src="../js/boardlist.js"></script>
+            <!-- <script language="JavaScript" src="../js/session.js?ver=125"></script> -->
 
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             <script src="https://kit.fontawesome.com/09b067fdc5.js" crossorigin="anonymous"></script>
-            <link rel="stylesheet" href="/wherehouse/css/list.css?ver=125">
-            <link rel="stylesheet" href="/wherehouse/css/listshow.css?ver=125">
+            <link rel="stylesheet" href="/wherehouse/css/list.css?ver=123">
+            <link rel="stylesheet" href="/wherehouse/css/listshow.css?ver=123">
             <script src="js/list.js?ver=123"></script> 
 
          </head>
@@ -37,10 +38,12 @@
       <div class="board-info">
          자유 게시판
       </div>
+      <!-- 
       <div id="wirteRule">
-         <div id="writeRuleHead">작성 규칙!</div> 
-         <hr class="gu_name_hr">
+         <input type="hidden" name="nickname" class="curNickName" value="<%=nickname %>">
+         <button type="button" id="writeRuleHead"></button> 
       </div>
+       -->
       <div id="writePage">
          <button type="button" onclick="writepage()" id="writePageBtn">글 작성하러 가기!</button>
       </div>

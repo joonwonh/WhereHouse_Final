@@ -37,12 +37,6 @@ window.onload = function(){
 		}
 	});
 	
-	/* 게시글 전체 목록 "list.jsp" 이동. */
-	document.querySelector('.listbutton').addEventListener('click', function(){
-	
-		alert("전체 글 목록으로 이동합니다.");
-		window.location.href = '/wherehouse/page/list';
-	});
 
 	document.querySelector('.replybutton').addEventListener('click', function(){
 	

@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhereHouse</title>
-    <link rel="stylesheet" href="../css/main.css?ver=123">
-    <link rel="icon" href="../images/home_icon.png">  <!--  <link rel="icon" href="/wherehouse/images/home_icon.png"> -->
-    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/main.css?ver=124">
+    <link rel="icon" href="../images/home_icon.png"> 
+    <script src="../js/main.js?ver=124"></script>
 </head>
 <body>
     <nav>
         <div id="menu">
             <div id="menu_home">
                 <div id="menu_home_icon">
-                    <a href="/wherehouse" ><img src="../images/home_icon.png" alt=""></a>		<!-- 별도 스프링 컨트롤러 거치치 않고 바로 컨텍스트 요청 실행. -->
+                    <a href="/wherehouse" ><img src="../images/home_icon.png" alt=""></a>
                 </div>
                 <hr id="menu_division">
             </div>
@@ -35,13 +35,6 @@
                     지역구 지도
                 </div>
             </div>
-            <div id="menu_detail">
-                <div id="menu_detail_icon">
-                    <img src="../images/detail_icon.png" alt="">
-                </div>
-                <div class="menu_txt">
-                    상세 지도
-                </div>
             </div>
             <div id="menu_board">
                 <div id="menu_board_icon">

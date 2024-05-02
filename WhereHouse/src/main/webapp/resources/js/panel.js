@@ -1,7 +1,3 @@
-/**
- * [이재서] 패널 기능
- */
-// ##이재서
 var info = document.querySelector("#information");
 var func = document.querySelector("#btn");
 

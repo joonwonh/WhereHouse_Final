@@ -325,7 +325,7 @@ function displayArea(area, population, isRecommend) {
         kakao.maps.event.addListener(polygon, 'click', function (mouseEvent) {
             var content = '<div class="info">'
                 + '<div id="info_close_wrap">'
-                + '<img src="images/closeBtn.svg" alt="" srcset="" id="info_close_btn" onclick="infoClose()"></div>'
+                + '<img src="../images/closeBtn.svg" alt="" srcset="" id="info_close_btn" onclick="infoClose()"></div>'
                 + '<div class="info_title">' + population.name + '</div><hr>'
                 + '<div class="info_rank">'
                 + '<div id="info_price_rank">'

@@ -22,7 +22,7 @@ public class MembersLoginController {
 	
 	@RequestMapping(value="/loginOk", method=RequestMethod.GET)
 	public String checkLogin(@RequestParam String id, @RequestParam String pw, Model model, HttpServletRequest httpRequest) {
-		System.out.println("checkLogin  메소드 실행");
+//		System.out.println("checkLogin  메소드 실행");
 		
 		model.addAttribute("loginRes", memberLoginService.ValidLoginCheck(id, pw, httpRequest));
 		return "members/loginOk";
@@ -30,14 +30,14 @@ public class MembersLoginController {
 	
 	@RequestMapping(value="/loginSuccess", method=RequestMethod.GET)
 	public String redirectLoginSueccess() {
-		System.out.println("redirectLoginSueccess  메소드 실행");
+//		System.out.println("redirectLoginSueccess  메소드 실행");
 		
 		return "members/loginSuccess"; 
 	}
 	
 	@RequestMapping(value="/logout", method=RequestMethod.POST)
 	public String pageLogout(HttpServletRequest httpRequest, HttpServletResponse httpResponse) {
-		System.out.println("pageLogout 메소드 실행");
+//		System.out.println("pageLogout 메소드 실행");
 		
 		memberLogoutService.executeLogout(httpRequest);
 		

@@ -34,10 +34,9 @@ public class BoardServiceController {
 	@Autowired
 	BoardWriteCommand boardWriteCommand;
 	
-	/* 사용자가 게시글 요청시 번호 클릭하여 요청시 응답 */
 	@RequestMapping(value="/list/{pnIndex}", method=RequestMethod.GET)
 	public String pageListPn(@PathVariable int pnIndex, Model model) {
-		System.out.println("pageListPn 메소드 실행");
+//		System.out.println("pageListPn 메소드 실행");
 		
 		Map<String, Object> listView = boardListService.searchBoard(pnIndex);
 		
@@ -48,28 +47,25 @@ public class BoardServiceController {
 		return "board/list";
 	}
 	
-	/* write.jsp 요청 시 해당 페이지 응답 */
 	@RequestMapping(value="/writepage", method=RequestMethod.GET)
 	public String WritePage() {
-		System.out.println("Writepage  메소드 실행");
+//		System.out.println("Writepage  메소드 실행");
 		
-		return "board/writepage";		// 글 작성 후 게시글 목록 확인
+		return "board/writepage";	
 	}
 	
-	/* 글 작성 요청, write.jsp의 게시글 작성 요청 처리 */
 	@RequestMapping(value="/writeboard", method=RequestMethod.POST)
 	public String WritePage(HttpServletRequest httpRequest, Model model) {
-		System.out.println("Writepage 메소드 실행");
+//		System.out.println("Writepage 메소드 실행");
 		
 		boardWriteService.boardWrite(httpRequest);
 		
-		return "redirect:/page/list";		// 글 작성 후 게시글 목록 확인
+		return "redirect:/page/list";
 	}
 	
-	/* 게시글 목록(list.jsp)에서 특정 게시글을 선택 */
 	@RequestMapping(value="/writeboard/{contentnum}", method=RequestMethod.GET)
 	public String writePage(@PathVariable int contentnum, Model model) {
-		System.out.println("writeboard 메소드 실행");
+//		System.out.println("writeboard 메소드 실행");
 		
 		Map<String, Object> contentView = boardChoiceService.sarchView(contentnum);
 		
@@ -88,7 +84,6 @@ public class BoardServiceController {
 		return "redirect:/page/list";		
 	}
 	
-	/* contentview.jsp에서 수정 페이지 요청 처리*/
 	@RequestMapping(value="/modifypage", method=RequestMethod.POST)
 	public String modifiyPageRequest(HttpServletRequest httpRequest, Model model) {
 		
@@ -101,20 +96,18 @@ public class BoardServiceController {
 		return "board/contentedit";		
 	}
 	
-	/* contentedit.jsp페이지에서의 게시글 수정 요청 처리 */
 	@RequestMapping(value="/modify", method=RequestMethod.POST)
 	public String modifyPage(HttpServletRequest httpRequest) {
-		System.out.println("modifiy 메소드 실행");
+//		System.out.println("modifiy 메소드 실행");
 		
 		boardModifyService.modifyBoard(httpRequest);
 		
 		return "redirect:/page/list";
 	}
 	
-	/* contentedit.jsp페이지에서의 댓글 작성 요청 */
 	@RequestMapping(value="/replyWrite", method=RequestMethod.POST)
 	public String replyWrite(HttpServletRequest httpRequest) {
-		System.out.println("replyWrite 메소드 실행");
+//		System.out.println("replyWrite 메소드 실행");
 		
 		boardWriteCommand.writeReply(httpRequest);
 		

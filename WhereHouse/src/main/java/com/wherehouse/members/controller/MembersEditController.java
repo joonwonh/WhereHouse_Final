@@ -21,7 +21,7 @@ public class MembersEditController {
 	
 	@RequestMapping(value="/membermodifypage", method=RequestMethod.POST)
 	public String modifiMember(HttpServletRequest httpRequest, Model model) {
-		System.out.println("modifipag 메소드 실행");
+//		System.out.println("modifipag 메소드 실행");
 		
 		model.addAttribute("MembersVO", membersEditPageService.searchEditMember(httpRequest));
 		
@@ -30,7 +30,7 @@ public class MembersEditController {
 	
 	@RequestMapping(value="/membermodifyok", method=RequestMethod.POST)
 	public String editMember(HttpServletRequest httpRequest, Model model) {
-		System.out.println("editMember 메소드 실행");
+//		System.out.println("editMember 메소드 실행");
 		
 		
 		model.addAttribute("ri", membersEditService.editMember(httpRequest));

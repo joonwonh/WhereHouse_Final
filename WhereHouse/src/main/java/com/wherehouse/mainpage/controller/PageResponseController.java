@@ -20,28 +20,28 @@ public class PageResponseController  {
 	// main.jsp
 	@RequestMapping(value="/main", method=RequestMethod.GET)
 	public String pageMain() {
-		System.out.println("메인페이지 메소드 실행");
+//		System.out.println("메인페이지 메소드 실행");
 		return "recommand/main";
 	}
 	
 	// house_rec.jsp
 	@RequestMapping(value="/houserec", method=RequestMethod.GET)
 	public String pageHouserec() {
-		System.out.println(("거주지추천페이지 메소드 실행"));
+//		System.out.println(("거주지추천페이지 메소드 실행"));
 		return "recommand/house_rec";
 	}
 	
 	// gu_map.jsp
 	@RequestMapping(value="/gumap", method=RequestMethod.GET)
 	public String pageGumap() {
-		System.out.println(("지역구정보페이지 메소드 실행"));
+//		System.out.println(("지역구정보페이지 메소드 실행"));
 		return "recommand/gu_map";
 	}
 	
 	// 초기 list.jsp
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public String pageList(Model model) {
-		System.out.println("상세정보페이지 메소드 실행");
+//		System.out.println("상세정보페이지 메소드 실행");
 		
 		Map<String, Object> listView = boardListService.searchBoard(0);
 		
@@ -55,7 +55,7 @@ public class PageResponseController  {
 	// login.jsp
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String pageLogin() {
-		System.out.println("로그인 메소드 실행");
+//		System.out.println("로그인 메소드 실행");
 		
 		return "members/login";
 	}
@@ -63,16 +63,10 @@ public class PageResponseController  {
 	// join.jsp
 	@RequestMapping(value="/join", method=RequestMethod.GET)
 	public String pageJoin() {
-		System.out.println("회원가입 메소드 실행");
+//		System.out.println("회원가입 메소드 실행");
 		
 		return "members/join";
 	}
 	
-	// informationPage.jsp
-	@RequestMapping(value="/reinfo", method=RequestMethod.GET)
-	public String pagereinfo() {
-		System.out.println("컨트롤러 /page의 reinfo메소드 실행");
-		
-		return "recommand/description";
-	}
+
 }

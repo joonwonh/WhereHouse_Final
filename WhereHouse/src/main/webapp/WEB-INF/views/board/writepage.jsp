@@ -7,8 +7,8 @@
 		<meta http-equiv="Content-Type" charset="text/html;charset=UTF-8">
 		<script language="JavaScript" src="./js/writedo.js"></script>
 		<title>WhereHouse</title>
-		<link rel="stylesheet" href="css/list.css?ver=123">
-		<link rel="stylesheet" href="./css/write.css?ver=123">
+		<link rel="stylesheet" href="css/list.css?ver=124">
+		<link rel="stylesheet" href="./css/write.css?ver=125">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link
@@ -17,20 +17,25 @@
 	</head>
 
 	<body>
-	   <aside id="side-bar">
-	      <div class="board-info">
-	         자유 게시판
-	      </div>
-	      <div id="wirteRule">
-	         <div id="writeRuleHead">작성 규칙!</div> 
-	         <hr class="gu_name_hr">
-	      </div>
-	      <a href="/wherehouse/page/list">목록으로 돌아가기</a>
-	      <div id="writePage">
-	         <button type="button" onclick="writepage()" id="writePageBtn">글 작성하러 가기!</button>
-	      </div>
-	      <div id="logo-img"><img src="../images/home_icon.png" alt=""></div>
-   </aside>
+	<aside id="side-bar">
+		<div class="board-info">
+			자유 게시판
+		</div>
+		<div id="wirteRule">
+		 	<p id="RuleTitle">작성 규칙!</p> 
+			<hr class="gu_name_hr">
+			<div id="writeRuleHead">
+				<li>제목은 30자 이내로 작성해주세요!</li>
+				<li>되도록 지역구를 선택해주세요!</li>
+				<li>이 곳은 정보를 주고 받는 공간입니다.</li>
+				<li>타인 비방은 금지!</li>
+			</div>
+		</div>
+		<div id="listPage">
+			<a href="/wherehouse/page/list" id="listPageBtn" >목록으로 돌아가기</a>
+		</div>
+		<div id="logo-img"><img src="../images/home_icon.png" alt=""></div>
+	</aside>
 	
 	<div id="writeMain">
 

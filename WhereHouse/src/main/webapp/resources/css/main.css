@@ -51,7 +51,6 @@ section {
     top: 10px;
 }
 
-/* 홈 아이콘 스타일 */
 #menu_home {
     width: 88px;
     height: 88px;
@@ -82,7 +81,6 @@ section {
     border: 1px solid white;
 }
 
-/* 메뉴 전체 텍스트 스타일 */
 .menu_txt {
     color: rgba(255, 255, 255, 1);
     width: 88px;
@@ -96,7 +94,6 @@ section {
     letter-spacing: 0;
 }
 
-/* 주거지 추천 선택 스타일 */
 #menu_suggest {
     width: 88px;
     height: 90px;
@@ -130,13 +127,12 @@ section {
     transform: scale(1.1);
 }
 
-/* 지역구 선택 스타일 */
 #menu_gu {
     width: 88px;
     height: 90px;
     position: absolute;
     left: 0px;
-    top: 180px;
+    top: 190px;
 }
 
 #menu_gu_icon {
@@ -163,46 +159,12 @@ section {
     transform: scale(1.1);
 }
 
-/* 상세 지도 선택 스타일 */
-#menu_detail {
-    width: 88px;
-    height: 90px;
-    position: absolute;
-    left: 0px;
-    top: 270px;
-}
-
-#menu_detail_icon {
-    width: 88px;
-    height: 88px;
-    position: absolute;
-    left: 0px;
-    top: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#menu_detail_icon img {
-    width: 55px;
-    height: 55px;
-    position: absolute;
-    left: 16.5px;
-    top: 5.5px;
-    border-radius: 45px;
-}
-
-#menu_detail_icon:hover img {
-    transition: 0.2s;
-    transform: scale(1.1);
-}
-
-/* 게시판 선택 스타일 */
 #menu_board {
     width: 88px;
     height: 90px;
     position: absolute;
     left: 0px;
-    top: 360px;
+    top: 310px;
 }
 
 #menu_board_icon {

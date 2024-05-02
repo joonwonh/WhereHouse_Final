@@ -1,6 +1,3 @@
-/**
- * [이재서] 맵 기본적인 세팅
- */
 var x = 37.56863122485489, y = 126.91487864398042;
 
 //var latLng = JSON.parse(localStorage.getItem("latLng"));

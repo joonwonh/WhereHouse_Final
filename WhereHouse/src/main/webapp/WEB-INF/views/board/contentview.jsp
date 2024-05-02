@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<% String sessionId=(String) session.getAttribute("id"); String sessionNickname=(String)
-session.getAttribute("nickname"); %>
+<% String sessionId=(String) session.getAttribute("id"); 
+String sessionNickname=(String) session.getAttribute("nickname"); %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,8 +10,8 @@ session.getAttribute("nickname"); %>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>WhereHouse</title>
-	<script language="JavaScript" src="/wherehouse/js/contentview.js"></script>
-	<link href="/wherehouse/css/contentView.css?ver=123" rel="stylesheet">
+	<script language="JavaScript" src="/wherehouse/js/contentview.js?ver=123"></script>
+	<link href="/wherehouse/css/contentView.css?ver=125" rel="stylesheet">
 	<link rel="stylesheet" href="/wherehouse/css/list.css?ver=123">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,16 +25,18 @@ session.getAttribute("nickname"); %>
 		<div class="board-info">
 			자유 게시판
 		</div>
-		<div id="wirteRule">
-			<div id="writeRuleHead">작성 규칙!</div>
-			<hr class="gu_name_hr">
-		</div>
-
-		<div id="writePage">
-			<button type="button" onclick="writepage()" id="writePageBtn">글 작성하러 가기!</button>
+		<!-- 
+      <div id="wirteRule">
+         <div id="writeRuleHead" value=""><%=sessionNickname%> 님</div> 
+      </div>
+       -->
+		<div id="listPage">
+			<a href="/wherehouse/page/list" id="listPageBtn" >목록으로 돌아가기</a>
 		</div>
 		<div id="logo-img"><img src="../images/home_icon.png" alt=""></div>
 	</aside>
+
+
 
 	<main id="mainContent">
 		<a id="listLogo">Where House</a>
@@ -47,11 +49,6 @@ session.getAttribute("nickname"); %>
 			<input type="hidden" name="region" class="region" value="${content_view.region}" />				
 			<input type="hidden" name="boardDate" class="bDate" value="${content_view.bdate}" />			
 			<input type="hidden" name="boardHit" class="hit" value="${content_view.hit}" />			
-			<!-- 
-									<div class="headerTitle">
-										<textarea class="title"  readonly>${content_view.title}</textarea>
-									</div>
-			 -->
 
 			<table id="topHeader">
 				<tr>
@@ -73,9 +70,8 @@ session.getAttribute("nickname"); %>
 						${content_view.bcontent} 
 				</div>
 				<div id="contentBtn">
-					<button value="전체 글 목록 보기" type="button" class="listbutton" class="contBtn" style="margin-right: 822px;">목록</button>
-					<button value="글 페이지로 이동하기" type="button" class="editbutton" class="contBtn">수정</button>
-					<button value="해당 글 삭제하기" type="button" class="deletebutton"  class="contBtn">삭제</button>
+					<button value="글 페이지로 이동하기" type="button" class="editbutton" class="contBtn"  id="editBtn">수정</button>
+					<button value="해당 글 삭제하기" type="button" class="deletebutton"  class="contBtn"  id="delBtn">삭제</button>
 				</div>
 			</div>
 		</form>

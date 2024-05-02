@@ -33,19 +33,19 @@ public class MembersRepository implements IMembersRepository {
 			membersVO = jdbcTemplate.queryForObject(query, new MemberVOMapper(), new Object[] {id});	
 		}catch(EmptyResultDataAccessException e) {	
 			
-			System.out.println("MembersRepository.checkMember : -1 반환");
+//			System.out.println("MembersRepository.checkMember : -1 반환");
 			
 			resObj.put("resInt", "-1");
 			return resObj;
 		}
 		
 		if(membersVO.getPw().equals(pw)) {
-			System.out.println("MembersRepository.checkMember : 0 반환");
+//			System.out.println("MembersRepository.checkMember : 0 반환");
 			resObj.put("membersVO", membersVO);
 			resObj.put("resInt", "1");
 			return resObj;
 		}else {
-			System.out.println("MembersRepository.checkMember : 1 반환");
+//			System.out.println("MembersRepository.checkMember : 1 반환");
 			resObj.put("resInt", "0");
 			return resObj;
 		}
@@ -77,7 +77,7 @@ public class MembersRepository implements IMembersRepository {
 	public MembersVO getMember(String parameterId) {
 		
 		String query = "select * from membertbl where id = ?";
-		System.out.println("parameterId : " + parameterId);
+//		System.out.println("parameterId : " + parameterId);
 		
 		return jdbcTemplate.queryForObject(query, new MemberVOMapper(), parameterId);
 	}
@@ -89,11 +89,11 @@ public class MembersRepository implements IMembersRepository {
 		String query = "update membertbl set pw=?, nickname=?, tel=?, email=? where id=?";
 			
 		if( jdbcTemplate.query(nickquery, new MemberVOMapper(), new Object[] {editParameter[1], editParameter[4]}).isEmpty()) {
-			System.out.println("닉네임 중복x");
+//			System.out.println("닉네임 중복x");
 			return jdbcTemplate.update(query, editParameter) ; 
 	
 		} else {
-			System.out.println("닉네임 중복");
+//			System.out.println("닉네임 중복");
 			return 2;
 		}
 	}

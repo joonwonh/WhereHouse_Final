@@ -18,7 +18,7 @@ public class MembersJoinController {
 	
 	@RequestMapping(value="/joinOk", method=RequestMethod.POST)
 	public String joinRequest(HttpServletRequest httpRequest, Model model) {
-		System.out.println("joinOk  메소드 실행");
+//		System.out.println("joinOk  메소드 실행");
 		
 		String resInt = String.valueOf(memberjoinService.ValidJoin(httpRequest));
 

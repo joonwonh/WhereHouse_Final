@@ -29,16 +29,57 @@
     width: 300px;
     border: rgba(11, 94, 215, 0.50) 2px solid;
     border-radius: 8px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 12px;
     margin-right: 10px;
     text-align: center;
-    height: 350px;
+    height: 50px;
 }
 
 #writeRuleHead  {
-    line-height: 40px;
-    font-size: 1.08rem;
+    line-height: 45px;
+    font-size: 1.2rem;
+    width: 280px;
+    height: 45px;
+    background-color: white;
+    border: none;
+}
+#goLogin    {
+    width: 300px;
+    border: rgba(11, 94, 215, 0.50) 2px solid;
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-left: 12px;
+    margin-right: 10px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.05rem;
+}
+#goLogin:hover {
+    margin-top: 30px;
+    margin-left: 12px;
+    margin-right: 10px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(86, 154, 255);
+    border-radius: 8px;
+    font-family: 'TheJamsil5Bold';
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+#goLoginBtn {
+    background-color: transparent;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.05rem;
+    border: none;
+}
+#goLoginBtn:hover {
+    color: white;
 }
 
 .gu_name_hr {
@@ -58,21 +99,42 @@
     margin-right: 10px;
     text-align: center;
     height: 50px;
+    line-height: 50px;
+    font-size: 1.05rem;
+}
+#writePage:hover    {
+    margin-top: 30px;
+    margin-left: 12px;
+    margin-right: 10px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(86, 154, 255);
+    border-radius: 8px;
+    font-family: 'TheJamsil5Bold';
+    font-size: 1.05rem;
+    cursor: pointer;
 }
 
 #writePageBtn   {
     background-color: transparent;
-    border: none;
-    line-height: 46px;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
     font-size: 1.05rem;
-
+    border: none;
 }
+#writePageBtn:hover   {
+    color: white;
+}
+
 
 .showlist   {
     position: relative;
     width: 1200px;
     left: 480px;
-    top: 180px;
+    top: 160px;
     text-align: center;
     border-top: 1px solid rgb(0, 0, 0);
 }
@@ -90,7 +152,6 @@
 #clickTitle:hover		{
 	color: #0B5ED7;
 }
-
 #listNickName   {
     width: 120px;
 }
