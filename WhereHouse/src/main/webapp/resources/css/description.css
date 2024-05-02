@@ -18,7 +18,6 @@ section {
 }
 
 
-/* 사이드 바 */
 #sidenav {
     opacity: 0;
     color: white;
@@ -28,7 +27,6 @@ section {
 }
 
 
-/* 바로가기 카테고리 */
 #menu_text {
     text-align: center;
 }
@@ -47,7 +45,6 @@ section {
 }
 
 
-/* 첫 텍스트 */
 #first_text {
     height: 100vh;
     font-size: 7rem;
@@ -61,7 +58,6 @@ section {
 }
 
 
-/* 섹션별 사진 */
 .img_section {
     height: 50vh;
 }
@@ -83,7 +79,6 @@ section {
     font-size: 2rem;
 }
 
-/* 설명 텍스트 */
 .descript_text {
     color: rgba(0, 0, 0, 0.6);
     font-size: 1.5rem;

@@ -16,7 +16,6 @@
     margin: 0;
 }
 
-/* 네비 바 */
 .navbar {
     padding: 20px;
 }
@@ -46,17 +45,14 @@
 
 .navbar {
     padding-top: 20px;
-    /* 네비게이션 바 상단 패딩 설정 */
 }
 
 .navbar-brand {
     margin-right: auto;
-    /* 로고를 가운데로 정렬 */
 }
 
 .navbar-nav {
     margin-left: auto;
-    /* 나머지 요소를 오른쪽으로 정렬 */
 }
 
 #nav_btn_house_rec,
@@ -88,11 +84,9 @@
 }
 
 
-/* 케러셀 디자인 */
 .main-carousel {
     width: auto;
     height: 100vh;
-    /* height: 860px; 이미지 높이 변경 */
 }
 
 .main-carousel-img {
@@ -113,7 +107,6 @@
     font-size: 70px;
 }
 
-/* 섹션 1 */
 #start_text {
     font-family: 'TheJamsil5Bold';
     font-size: 3rem;
@@ -142,7 +135,6 @@
 }
 
 
-/* 추천 버튼  1 2 3 */
 .btn {
     font-family: 'TheJamsil5Bold';
     color: black;
@@ -174,7 +166,6 @@
 }
 
 
-/* 거주지 추천 소개 창 */
 #section2,
 #section3 {
     border: 2px solid #dfdfdf;
@@ -221,7 +212,6 @@
     font-family: 'TheJamsil5Bold';
 }
 
-/* 카드 섹션 3 */
 .section_card {
     font-family: 'TheJamsil5Bold';
 }
@@ -242,7 +232,6 @@
 
 
 
-/* 첫번 째 사이트 설명 */
 .ani_left_to_right {
     opacity: 0;
     transition: all 2.5s;
@@ -282,39 +271,6 @@
     color: #7b7b7b;
 }
 
-
-/* 추천페이지 보러가는 탭 
-#btn_rec {
-    color: rgb(0, 140, 255);
-}
-
-#btn_rec:hover {
-    color: white;
-}*/
-
-
-/* 종합점수 보러가는 탭 
-#show_score a {
-    font-family: 'TheJamsil5Bold';
-    text-decoration: none;
-    color: rgb(0, 140, 255);
-    font-size: 2.5rem;
-}
-
-#trans_descript {
-    width: 400px;
-    height: 80px;
-    font-size: 2.7rem;
-    line-height: 70px;
-    border: none;
-}
-
-#trans_descript:hover {
-    color: white;
-}*/
-
-
-/* 두번 째 사이트 설명 */
 #intro_map_page {
     display: none;
 }
@@ -361,14 +317,12 @@
 }
 
 
-/* 탑 버튼 */
 #top_btn .btn {
     font-family: 'TheJamsil5Bold';
     line-height: 30px;
 }
 
 
-/* 푸터 */
 footer {
     background-color: #ffffff;
 }

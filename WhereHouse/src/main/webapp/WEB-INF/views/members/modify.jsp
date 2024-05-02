@@ -49,26 +49,26 @@
                                         <div class=" mt-3 mb-1" id="modify-id"><input type="text" size="20"
                                                 class="form-control" value="${MembersVO.id}" disabled>
                                         		<input type="hidden" name="id"  value="${MembersVO.id}" />
-                                        </div>						<!-- Id 항목, 수정 불가-->
+                                        </div>				
                                         <div class="mb-1" id="modify-pw"><input type="password" name="pw"  id ="pw" size="20"
                                                 class="form-control"
-                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;비밀번호"></div>			<!-- Password -->
+                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;비밀번호"></div>	
                                                 
                                         <div class="mb-5" id="modify-pwCheck"><input type="password"  id ="pwcheck"
                                                 size="20" class="form-control"
-                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;비밀번호 확인"></div>	<!-- Password check -->
+                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;비밀번호 확인"></div>	
                                                 
                                         <div class="mb-1" id="modify-nickName"><input type="text" name="nickname" id ="nickname" 
-                                                size="20" class="form-control"
-                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;닉네임"></div>			<!-- nickname -->
+                                                size="20" maxlength=6 class="form-control"
+                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;닉네임"></div>	
                                                 
                                         <div class="mb-1" id="modify-tel"><input type="text" name="tel" size="20"	 id ="tel" 
                                                 class="form-control"
-                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전화번호"></div>			<!-- 전화번호 -->
+                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전화번호"></div>
                                                 
                                         <div class="mb-2" id="modify-email"><input type="text" name="email" size="20"
                                                 class="form-control"
-                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이메일"></div>			<!-- 이메일 -->
+                                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이메일"></div>	
 
                                         <div id="logo-img"><img src="images/home_icon.png" alt=""></div>
                                         <div class="mt- mb- pb-2"></div>

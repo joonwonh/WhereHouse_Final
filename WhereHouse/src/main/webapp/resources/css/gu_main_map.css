@@ -140,7 +140,6 @@ body {
     z-index: 1;
 }
 
-/* 지도 크기 */
 #map {
     width: 1832px;
     height: 945px;

@@ -1,6 +1,5 @@
 window.onload = function () {
 
-    /* 회원가입 : join.jsp 입력 정보 검증 및 요청 */
     document.getElementById("joinBtn").addEventListener("click", function () {
 
         var id = $('input[id="id"]');
@@ -9,12 +8,6 @@ window.onload = function () {
         var nickName = $('input[id="nickname"]');
         var tel = $('input[id="tel"]');
         var email = $('input[id="email"]');
-
-        console.log("pw : ");
-        console.log(pw.val());
-
-        console.log("pwCheck : ");
-        console.log(pwCheck.val());
 
         if (id.val() == "") {
             alert("아이디를 입력하세요");

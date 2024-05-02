@@ -1,32 +1,24 @@
 window.onload = function () {
 
 
-    /* 회원정보 수정 : modify.jsp 파일에서 회원 가입 정보 입력 시 작업. */
     document.getElementById('memberEditBtn').addEventListener("click", function () {
 
-        /* 유효성 검증 : 사용자가 입력한 정보가 올바른지 확인. */
 
-        var pw = $('input[id="pw"]').val();  // 비밀번호
-        var pwcheck = $('input[id="pwcheck"]').val();  // 비밀번호 확인.
-        var nickname = $('input[id="nickname"]').val();  // 닉네임.
-        var tel = $('input[id="tel"]').val();  // 전화번호
-        var email = $('input[id="email"]').val();  // 이메일
+        var pw = $('input[id="pw"]').val();  
+        var pwcheck = $('input[id="pwcheck"]').val(); 
+        var nickname = $('input[id="nickname"]').val();
+        var tel = $('input[id="tel"]').val();  
+        var email = $('input[id="email"]').val();  
 
         if (pw == '') {
             alert('비밀번호를 입력하세요!');
             return;
         } else if (pwcheck == '') {
             alert('비밀번호 확인 정보를 입력하세요!');
-            console.log('pwcheck');
-            console.log(pwcheck);
+
             return;
         } else if (pw != pwcheck) {
             alert('비밀번호와 비밀번호 확인 내용이 다릅니다!');
-            console.log('pw');
-            console.log(pw);
-
-            console.log('pwcheck');
-            console.log(pwcheck);
 
             return;
 
@@ -41,8 +33,13 @@ window.onload = function () {
             return;
         }
 
-        /* 유효성 검증 이상 없을 시 사용자 입력 정보를 바탕으로 회원 정보 수정 */
-        console.log('회원정보 수정');
-        document.getElementById('reg_frm').submit();    // 회원정보 수정 요청.
+		if(confirm("수정하시겠습니까?"))	{
+			alert("수정되었습니다.");
+			document.getElementById('reg_frm').submit();
+		}
+		else	{
+			alert("취소되었습니다.");
+		}
+         
     });
 }

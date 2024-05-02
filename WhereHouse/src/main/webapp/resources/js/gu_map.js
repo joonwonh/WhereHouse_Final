@@ -3,10 +3,10 @@ var guInfo = [];
 //카카오맵 커스텀 오버레이
 var customOverlay;
 
-window.onload = function () {			// HTML 페이지가 처음 로드되는 시점에 kakaomap API map 내 커스텀 오버레이(기본 값은 서울 전체 적용) 등의 작업을 한다. 
-    guInfoInit();								// 메뉴 "지역구 지도"에서 각 지역 선택 시 보여지는 핫플레이스의 사진 및 간단 설명 등의 static data를 변수 "guInfo" 내 저장.
-    var container = document.getElementById("map");				// map : KakaoMap API 보여지는 js
-    var options = {															// KakaoMAP Api 그리기 위한 옵션 값들.
+window.onload = function () {
+    guInfoInit();
+    var container = document.getElementById("map");	
+    var options = {					
         center: new kakao.maps.LatLng(37.5642135, 127.0016985),
         level: 8,
         minLevel: 8,
@@ -14,14 +14,12 @@ window.onload = function () {			// HTML 페이지가 처음 로드되는 시점�
         disableDoubleClickZoom: true // 더블 클릭 확대 잠금
     };
 
-    var map = new kakao.maps.Map(container, options);				// KakaoMap 그리기 위한 준비.	
+    var map = new kakao.maps.Map(container, options);	
 
-
-    // 구 선택에 따른 이벤트
-    var selectGu = document.getElementById("gu_select");				// 지역구 선택 select 태그
-    selectGu.addEventListener("change", () => {									// Select 태그 내 option 이 바뀌면 실행되는 이벤트.
-        var selected_name = $("#gu_select option:selected").val(); 				// jquery 사용, select 태그 내 option 태그 값 가져오기.(선택 지역 정보) 
-        initInfo(selected_name);														// 핫플레이스 정보 제공 함수.
+    var selectGu = document.getElementById("gu_select");	
+    selectGu.addEventListener("change", () => {									
+        var selected_name = $("#gu_select option:selected").val(); 			
+        initInfo(selected_name);												
     });
 
     // json 파싱 및 전처리
@@ -100,7 +98,6 @@ window.onload = function () {			// HTML 페이지가 처음 로드되는 시점�
             var latLng = { lat: mouseEvent.latLng.La, lng: mouseEvent.latLng.Ma };
             localStorage.setItem("latLng", JSON.stringify(latLng));
 
-            /* 커스텀 오버레이 : Kakamaps 내 지역구를 커스텀(색상 등)적용하는 것. */
             customOverlay = new kakao.maps.CustomOverlay({
                 content: content,
                 map: map,
@@ -111,7 +108,6 @@ window.onload = function () {			// HTML 페이지가 처음 로드되는 시점�
         });
     }
 
-    // 패널 열고 닫기
     var info = document.querySelector("#information");
     var func = document.querySelector("#btn");
 
@@ -173,89 +169,67 @@ function infoClose() {
     customOverlay.setMap(null);
 }
 
-/**
- * 지역구 선택 및 변경 시 정보를 다시 뿌려주는 함수
- */
+
 
 /* 지역구 변경 이벤트 발생(select 태그) 따른 핫플레이스 정보 변경하여 제공하는 함수. */
 function initInfo(selected_name) {
     if (customOverlay != null) {
-        infoClose();							// KakaomapAPI 에서 커스텀 오버레이 지우기.
+        infoClose();				
     }
-    var div_score = document.getElementById("average-score");		// 총합 점수에 대한 HTML 전체의 div 태그
-    var div_hPlace = document.getElementById("hotPlace_wrap");	// 핫플레이스 항목에 대한 HTML 전체의 div 태그
-    var select_need = document.getElementById("select_need");		// 가격 정보를 포함한 div 태그
+    var div_score = document.getElementById("average-score");	
+    var div_hPlace = document.getElementById("hotPlace_wrap");
+    var select_need = document.getElementById("select_need");
 
-    var charter_fee = document.getElementById("charter-deposit-fee");		// select_need 태그 내 전세금 span 태그.
-    var deposit_fee = document.getElementById("monthly-deposit-fee");	// select_need 태그 내 월세 보증금 span 태그
-    var monthly_fee = document.getElementById("monthly-month-fee");	// select_need 태그 내 월세금 span 태그
+    var charter_fee = document.getElementById("charter-deposit-fee");		
+    var deposit_fee = document.getElementById("monthly-deposit-fee");
+    var monthly_fee = document.getElementById("monthly-month-fee");	
 
     // 전세/월세 가격 표시
 
-    for (var i = 0; i < guInfo.length; i++) {				// guInfo : window.onload = function() 내 guInfoInit 메소드 적용. 
-        if (guInfo[i].name === selected_name) {		// 현재 선택된 지역 이름을 가지고 전체 guInfo와 비교해 가며 찾기.  
-            charter_fee.innerText = guInfo[i].charter;		// 현재 선택 지역의 전세비용
-            deposit_fee.innerText = guInfo[i].deposit;		// 현재 선택 지역의 보증금
-            monthly_fee.innerText = guInfo[i].monthly;		// 현재 선택 지역의 월세
+    for (var i = 0; i < guInfo.length; i++) {			
+        if (guInfo[i].name === selected_name) {		
+            charter_fee.innerText = guInfo[i].charter;		
+            deposit_fee.innerText = guInfo[i].deposit;		
+            monthly_fee.innerText = guInfo[i].monthly;	
         }
     }
-    if (selected_name === "default") {			// 기본 값 선택 시 실행.
-        div_score.style.display = "none";				// 종합 점수 div 태그 안 보이게 설정	
-        div_hPlace.style.display = "none";				// 핫 플레이스 div 태그 안 보이게 설정
-        select_need.style.display = "none";			// 가격 정보 div 태그 안 보이게 설정.
+    if (selected_name === "default") {		
+        div_score.style.display = "none";	
+        div_hPlace.style.display = "none";
+        select_need.style.display = "none";
 
-    } else {			/* 선택한 지역이 default가 아닐 시 위 요소들 보이게 설정  */
+    } else {		
         div_score.style.display = "block";
         div_hPlace.style.display = "block";
         select_need.style.display = "block";
 
         // 종합 점수 내 생활 안전 점수와 생활 편의 점수 그래프(div) 그리기
-        var safety_barChart = document.getElementById("safety_barChart");			// 생활 안전 점수 태그(div)
-        var conv_barChart = document.getElementById("convenience_barChart");		// 생활 편의 점수 태그(div)
+        var safety_barChart = document.getElementById("safety_barChart");		
+        var conv_barChart = document.getElementById("convenience_barChart");		
 
-        for (var i = 0; i < guInfo.length; i++) {			// guinfo : guinfoInit()로 불러온 핫 플레이스 static data
+        for (var i = 0; i < guInfo.length; i++) {		
             if (guInfo[i].name === selected_name) {
-                document.getElementById("safety_value").innerText = guInfo[i].safe_score;	// 생활 안전 숫자 설정
-                document.getElementById("convenience_value").innerText = guInfo[i].conv_score;	// 생활 편의 숫자 설정
-                safety_barChart.style.height = guInfo[i].safe_score + "px"				// 생활 안전 점수 따른 높이 설정.(div)
-                conv_barChart.style.height = guInfo[i].conv_score + "px";				// 생활 편의 점수 따른 높이 설정.(div)
+                document.getElementById("safety_value").innerText = guInfo[i].safe_score;	
+                document.getElementById("convenience_value").innerText = guInfo[i].conv_score;	
+                safety_barChart.style.height = guInfo[i].safe_score + "px"			
+                conv_barChart.style.height = guInfo[i].conv_score + "px";		
             }
         }
     }
 
-    /* 핫플레이스를 스프링에 맞게 코드 변경. */
-    var imgPath = "../images/hotPlace/" + selected_name + "/img";				// selected_name : 강남구, 강서구 ...
-    console.log("imgPath");
-    console.log(imgPath);
+    var imgPath = "../images/hotPlace/" + selected_name + "/img";	
+
     for (var i = 0; i < guInfo.length; i++) {
 
         if (guInfo[i].name === selected_name) {
 
             for (var j = 1; j <= 3; j++) {
 
-                document.getElementById("carousel-img" + j).src = imgPath + j + ".jpg";    	// 현재 디렉토리의 상대경로를 기준으로 /wherehouse/images/이미지 이름.을 찾는다.
-                /* 디버그 */
-                	console.log("imgPath");
-                	console.log(imgPath);
-                /* 디버그 */
+                document.getElementById("carousel-img" + j).src = imgPath + j + ".jpg";
                 document.getElementById("carousel-caption" + j).innerText = guInfo[i].place_name[j - 1];
             }
         }
     }
-
-    /*	핫플레이스를 스프링에 맞게 적용하기 위한 백업	
-    var imgPath = "images/hotPlace/" + selected_name;			// 지역 구 설정 따른 핫 플레이스 사진 설정.(select_name : 폴더 이름)
- 
-    for (var i = 0; i < guInfo.length; i++) {
-        if (guInfo[i].name === selected_name) {
-            for (var j = 1; j <= 3; j++) {
-                document.getElementById("carousel-img" + j).src = imgPath + "/img" + j + ".jpg";
-                document.getElementById("carousel-caption" + j).innerText = guInfo[i].place_name[j - 1];
-            }
-            break;
-        }
-    }
-    */
 }
 
 

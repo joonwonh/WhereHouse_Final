@@ -10,8 +10,8 @@
 %>
 	
 	<script language="javascript">
-		alert("정보 수정되었습니다.");
-		document.location.href="/loginSuccess"
+		alert("로그아웃 후 재 로그인 해주시길 바랍니다.");
+		document.location.href="/wherehouse"
 	</script>
 <%
 	} else if(ri == 2 ){
@@ -35,7 +35,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>WhereHouse</title>
 </head>
 <body>
 

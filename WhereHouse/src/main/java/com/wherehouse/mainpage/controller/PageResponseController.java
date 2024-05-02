@@ -68,5 +68,14 @@ public class PageResponseController  {
 		return "members/join";
 	}
 	
+	// description.jsp
+	@RequestMapping(value="/reinfo", method=RequestMethod.GET)
+	public String pagereinfo() {
+//		System.out.println("컨트롤러 /page의 reinfo 메소드 실행!");
+		
+		return "recommand/description";
+	}
+
+	
 
 }

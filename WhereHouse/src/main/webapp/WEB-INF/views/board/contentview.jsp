@@ -10,7 +10,7 @@ String sessionNickname=(String) session.getAttribute("nickname"); %>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>WhereHouse</title>
-	<script language="JavaScript" src="/wherehouse/js/contentview.js?ver=123"></script>
+	<script language="JavaScript" src="/wherehouse/js/contentview.js?ver=125"></script>
 	<link href="/wherehouse/css/contentView.css?ver=125" rel="stylesheet">
 	<link rel="stylesheet" href="/wherehouse/css/list.css?ver=123">
 	

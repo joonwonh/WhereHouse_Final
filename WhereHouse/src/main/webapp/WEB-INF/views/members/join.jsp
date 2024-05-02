@@ -41,17 +41,17 @@
             <div id="inputBox" class="me-3 ms-3 row">
             	<form action="../joinOk" id="reg_frm" method="POST">
                 <div id="login-form-border" class="pt-3 pb-3">
-                  	<div class=" mt-3 mb-1" id="join-id"><input type="text" id="id" name="id" size="20" class="form-control"
+                  	<div class=" mt-3 mb-1" id="join-id"><input type="text" id="id" name="id" size="20" maxlength=12  class="form-control"
                                 placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아이디"></div>
-                        <div class="mb-1" id="join-pw"><input type="password" id="pw" name="pw" size="20" class="form-control"
+                        <div class="mb-1" id="join-pw"><input type="password" id="pw" name="pw" size="20" maxlength=12 class="form-control"
                                 placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;비밀번호"></div>
                         <div class="mb-5" id="join-pwCheck"><input type="password" id="pw_check" size="20"
                                 class="form-control" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;비밀번호 확인"></div>
-                        <div class="mb-1" id="join-nickName"><input type="text" id="nickname" name="nickName" size="20"
+                        <div class="mb-1" id="join-nickName"><input type="text" id="nickname" name="nickName" size="20" maxlength=6
                                 class="form-control" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;닉네임"></div>
-                        <div class="mb-1" id="join-tel"><input type="text" id="tel" size="20" name="tel" class="form-control"
+                        <div class="mb-1" id="join-tel"><input type="text" id="tel" size="20" maxlength=11 name="tel" class="form-control"
                                 placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전화번호"></div>
-                        <div class="mb-4" id="join-email"><input type="text" id="email" size="20" name="email" class="form-control"
+                        <div class="mb-4" id="join-email"><input type="text" id="email" size="20" name="email" maxlength=20 class="form-control"
                                 placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이메일"></div>
 
                         <div id="logo-img"><img src="../images/home_icon.png" alt=""></div>

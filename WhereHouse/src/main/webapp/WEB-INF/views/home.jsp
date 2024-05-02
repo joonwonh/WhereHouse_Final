@@ -5,6 +5,6 @@
 	<title>Home</title>
 </head>
 <body>
-	<A href='<c:url value="/information" />'>상세보기 페이지</A>
+	<A href='<c:url value="/information" />'></A>
 </body>
 </html>

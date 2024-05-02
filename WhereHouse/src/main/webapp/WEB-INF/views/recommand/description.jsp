@@ -37,48 +37,38 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end me-4" id="navbarScroll">
                     <ul class="navbar-nav navbar-nav-scroll" style="--bs-scroll-height: 300px;">
-                        <li class="nav-item dropdown">
-                            <a class=" nav-link dropdown-toggle me-5" id="nav_btn_house_rec" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item ">
+                            <a class=" nav-link me-5" id="nav_btn_house_rec" href="/wherehouse/page/main" role="button">
                                 거주지 추천
                             </a>
-                            <ul class="nav_btn_house_rec_dropdown dropdown-menu me-5 dropdown-menu-end text-end" id="">
-                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/main">직접 입력 추천</a></li>
-                            </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle me-5" id="nav_btn_gu_map" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                       <li class="nav-item ">
+                            <a class=" nav-link me-5"  id="nav_btn_gu_map" href="/wherehouse/page/main" role="button">
                                 지도
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end me-4 text-end" id="nav_btn_gu_map_dropdown">
-                                <li><a class="dropdown-item nav_choose" href="../page/main" id="gu_btn">지역구 지도</a></li>
-                                <li><a class="dropdown-item nav_choose" href="../page/main" id="detail_btn">상세 지도</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class=" nav-link dropdown-toggle me-3" id="nav_btn_data_script" href="/wherehouse/page/reinfo" role="button"
+                            <a class=" nav-link dropdown-toggle me-3" id="nav_btn_data_script" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 데이터 분석
                             </a>
-                            <ul class="nav_btn_house_rec_dropdown dropdown-menu me-5 dropdown-menu-end text-end" id="">
-                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo">분석 적용 방식 페이지</a></li>
+                            <ul class="dropdown-menu me-5 dropdown-menu-end text-end nav_btn_house_rec_dropdown" id="">
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo">분석 적용 방식 페이지</a>
+                                </li>
                                 <hr id="navbar_hr">
                                 <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#first_page">생활 안전
-                                        관련</a>
-                                </li>
-                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#second_page">생활 편의
-                                        관련</a>
-                                </li>
-                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#third_page">가격 관련</a>
-                                </li>
-                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#fourth_page">추천 결과
-                                        관련</a>
-                                </li>
-                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#fifth_page">인구 밀집도
-                                        관련</a>
-                                </li>
+                                        관련</a></li>
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#second_page">생활
+                                        편의
+                                        관련</a></li>
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#third_page">가격
+                                        관련</a></li>
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#fourth_page">추천
+                                        결과
+                                        관련</a></li>
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#fifth_page">인구
+                                        밀집도
+                                        관련</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -86,6 +76,7 @@
             </div>
         </nav>
     </header>
+    
     <aside>
         <nav class="position-fixed top-50 end-0 pt-3 pb-3" id="sidenav">
             <div class="container">
@@ -204,17 +195,12 @@
                 </div>
                 <div class="col-md-5 img_text">
                     <p class="text-end first_background">
-                        생활 안전 점수 산정 방식<br><br>
+                        생활 안전 점수 산정 방식<br><br><br>
                         <span class="descript_text">
-                            핀 포인트를 기반으로 파출소까지의 최소 거리와 반경 500미터의 cctv 개수,<br>
-                            그리고 해당 지역구의 범죄 검거율을 수집하였습니다. <br>
-                            수집한 데이터의 지표 별 가중치를 다르게 하여 안전성 점수를 산정합니다. <br>
+						여러 안전 관련 데이터들 중에서 <br>
+						구 별 파출소 개수와 CCTV 대수 데이터를 선정하여 분석 후<br>
+						각 구 별 안전 점수를 산정합니다.
                             <br><br>
-                            <span id="formula">
-                                검거율 = 0.8104 + 0.006977 * 시내 주요 기관 수 - 3.374×10^(-7) * 인구 수 <br> - 6.682×10^(-6) *
-                                밀집도 <br>
-                                안전성 점수 = 파출소까지의 최소 거리 * 60 + 반경 500m cctv 개수 * 30 + 검거율 * 10
-                            </span>
                         </span>
                     </p>
 
@@ -351,24 +337,29 @@
                         <div class="nav-item mb-2">
                             <a class="nav-link p-0 text-muted">
                                 <i class="bi bi-geo-alt-fill">
-                                    서울시 서대문구 증가로
+                                    서울시 은평구 연서로
                                 </i>
                             </a>
                         </div>
                         <div class="nav-item mb-2">
                             <a class="nav-link p-0 text-muted">
                                 <i class="bi bi-telephone-fill">
-                                	팀장 이재서 : 010-4130-1998<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                    조원 정범진 : 010-3370-7750
+									010-2794-0796
                                 </i>
                             </a>
                         </div>
                         <div class="nav-item mb-2">
-                            <a class="nav-link p-0 text-muted" href="https://github.com/joonwonh/WhereHouse"
+                            <a class="nav-link p-0 text-muted">
+                                <i class="bi bi-envelope-fill">
+                                    joonwon24@gmail.com
+                                </i>
+                            </a>
+                        </div>
+                        <div class="nav-item mb-2">
+                            <a class="nav-link p-0 text-muted" href="https://github.com/joonwonh"
                                 target="_blank">
                                 <i class="bi bi-github">
-                                    github.com/N0WST4NDUP/WhereHouse-2
+                                    github.com/joonwonh
                                 </i>
                             </a>
                         </div>
@@ -380,28 +371,28 @@
                     <ul class="nav-flex-column">
                         <div class="nav-item mb-2">
                             <a class="nav-link p-0 text-muted"
-                                href="https://github.com/N0WST4NDUP/WhereHouse-2/tree/main/1.%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%ED%9A%8D%EC%84%9C"
+                                href=""
                                 target='_blank'>
                                 Project Plan pres.
                             </a>
                         </div>
                         <div class="nav-item mb-2">
                             <a class="nav-link p-0 text-muted"
-                                href="https://github.com/N0WST4NDUP/WhereHouse-2/tree/main/2.%EA%B0%9C%EB%B0%9C%EA%B3%84%ED%9A%8D%EC%84%9C"
+                                href=""
                                 target='_blank'>
                                 Develop Plan
                             </a>
                         </div>
                         <div class="nav-item mb-2">
                             <a class="nav-link p-0 text-muted"
-                                href="https://github.com/N0WST4NDUP/WhereHouse-2/tree/main/3.%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EC%A0%95%EC%9D%98%EC%84%9C_%EB%B6%84%EC%84%9D%EC%84%9C"
+                                href=""
                                 target='_blank'>
                                 Function Specification
                             </a>
                         </div>
                         <div class="nav-item mb-2">
                             <a class="nav-link p-0 text-muted"
-                                href="https://github.com/N0WST4NDUP/WhereHouse-2/tree/main/4.%ED%99%94%EB%A9%B4%20%EC%84%A4%EA%B3%84%EC%84%9C"
+                                href=""
                                 target='_blank'>
                                 Wire Frame
                             </a>

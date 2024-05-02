@@ -31,25 +31,25 @@ public class RecServiceController {
 	
 	@RequestMapping(value="/charter", method=RequestMethod.POST)
 	public @ResponseBody List<RecServiceVO> ControllerRecServiceCharter(@RequestBody Map<String, String>requestAjax) {
-		System.out.println("/charter 메소드 실행");
+//		System.out.println("/charter 메소드 실행");
 		
 		if(requestAjax.get("charter_avg").equals("")) {
 			return null;
 		}
 		else {
-			List<RecServiceVO> RecServiceResult = recServiceCharterService.execute(requestAjax);			// ServiceBean으로 분기
+			List<RecServiceVO> RecServiceResult = recServiceCharterService.execute(requestAjax);	
 			return RecServiceResult;
 		}
 	}
 	
 	@RequestMapping(value="/monthly", method=RequestMethod.POST)
 	public @ResponseBody List<RecServiceVO> ControllerRecServiceMothly(@RequestBody Map<String, String>requestAjax) {	
-		System.out.println("/monthly 메소드 실행");
+//		System.out.println("/monthly 메소드 실행");
 		
 		if(requestAjax.get("deposit_avg").equals("")) {
 			return null;
 		} else {
-			List<RecServiceVO> RecServiceResult = recServiceMonthlyService.execute(requestAjax);		// ServiceBean으로 분기
+			List<RecServiceVO> RecServiceResult = recServiceMonthlyService.execute(requestAjax);
 			return RecServiceResult;
 		}
 	}

@@ -1,9 +1,13 @@
 window.onload = function() {
 	
 	document.querySelector('.editbutton').addEventListener('click', function(){
-
-		alert("게시글 수정 합니다.");
-		this.submit();
+		if(confirm("수정하시겠습니까?"))	{
+			alert("수정되었습니다.");
+			this.submit();
+		}
+		else	{
+			alert("취소되었습니다.");
+		}
 	});
 
 	document.querySelector('.listbutton').addEventListener('click', function(){

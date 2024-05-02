@@ -33,8 +33,6 @@ body {
     
     transition: 500ms;
 }
-
-/* �궗�씠�뱶 踰꾪듉 */
 #btn {
     position: absolute;
     width: 33px;
@@ -55,7 +53,6 @@ body {
     cursor: pointer;
 }
 
-/* �궗�씠�뱶 諛� */
 #side-bar {
     position: absolute;
     /* border: 2px solid #0B5ED7; */
@@ -79,7 +76,6 @@ body {
     transition: 500ms;
 }
 
-/* 二쇨굅吏� 異붿쿇 */
 .house_recommend {
     background: #4690ff;
     color: #e9f2ff;
@@ -93,7 +89,6 @@ body {
     box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* �쟾�꽭/�썡�꽭 �꽑�깮 */
 #char_month_hr {
     margin-bottom: 10px;
 }
@@ -114,7 +109,6 @@ body {
     font-size: 20px;
 }
 
-/* �쟾�꽭 �썡�꽭 �꽑�깮 李� */
 #check_need {
     display: flex;
     font-size: 17px;
@@ -168,7 +162,6 @@ body {
     text-align: right;
 }
 
-/* 移섏븞/�렪�쓽 �꽑�깮 */
 .safety_convenience {
     width: 300px;
     border: rgba(11, 94, 215, 0.50) 2px solid;
@@ -204,7 +197,6 @@ body {
 }
 
 
-/* 異붿쿇寃곌낵 �솗�씤 踰꾪듉 */
 #recommend_result,
 #recommend_comparison {
     width: 190px;
@@ -274,7 +266,6 @@ body {
     cursor: pointer;
 }
 
-/* 寃곌낵 李� */
 .rec_result_div {
     width: 100px;
 }
@@ -389,7 +380,6 @@ body {
 }
 
 
-/* 異붿쿇 寃곌낵 �쟾�꽭, �썡�꽭湲� �뒪���씪 */
 .select_price {
     text-align: center;
 }
@@ -423,7 +413,6 @@ body {
     left: 110px;
 }
 
-/* �븞�젙�꽦 �렪�쓽�꽦 �뀓�뒪�듃*/
 #average-score-inner-text {
     position: absolute;
     margin: 0;
@@ -446,7 +435,6 @@ body {
     height: 100%;
 }
 
-/* �븞�쟾, �렪�쓽 �뒳�씪�씠�뱶諛� �꽕紐� */
 #descript_convenience,
 #descript_safety {
     padding-left: 15%;
@@ -454,7 +442,6 @@ body {
     color: #888686;
 }
 
-/* 추천결과 지역구 선택시 정보 보여줌 */
 .select-gu-info {
     width: 310px;
     border: rgba(11, 94, 215, 0.50) 2px solid;
@@ -504,7 +491,6 @@ body {
 
 
 
-/* 踰꾪듉 css */
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -941,8 +927,6 @@ input[type="button"].btn-block {
     width: 100%;
 }
 
-/* 踰꾪듉 洹몃９ 愿��젴 */
-/* btn-group 愿��젴 異붽� */
 .btn-lg,
 .btn-group-lg>.btn {
     padding: 0.5rem 1rem;

@@ -43,10 +43,10 @@ public class RecServiceEmpRepository implements IRecServiceEmpRepository {
 		
 		if(cvt != safe) {
 			recServiceResult = jdbcTemplate.query(query, new Object[]{inputData}, new EmpMapper());
-			System.out.println("RecServiceResult.size() : " + recServiceResult.size());
+//			System.out.println("RecServiceResult.size() : " + recServiceResult.size());
 		} else {
 			recServiceResult = jdbcTemplate.query(query, new Object[]{inputData, safe}, new EmpMapper());
-			System.out.println("RecServiceResult.size() : " + recServiceResult.size());
+//			System.out.println("RecServiceResult.size() : " + recServiceResult.size());
 		}
 		
 	        

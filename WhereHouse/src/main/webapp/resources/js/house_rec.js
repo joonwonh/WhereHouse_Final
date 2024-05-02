@@ -47,7 +47,6 @@ window.onload = function () {
     });
 
     // 구 별 인구 밀집도 데이터 초기화
-    // static 데이터이며 각 구별 빅데이터 분석 데이터 따른 안전성 점수, 편의성 점수 및 리뷰를 미리 등록 해 놓음.
     populationArea = initPopulation();
 
     // 패널 열고 닫기
@@ -78,14 +77,12 @@ window.onload = function () {
     }
 
     // 전세/월세 라디오 버튼 선택하면 해당 버튼에 따라 각 전/월세 입력 화면이 바뀜.
-    var rentalType = document.querySelectorAll("input[name='rentalType']");		/* rentalType : 전/월세 버튼 2개 */
+    var rentalType = document.querySelectorAll("input[name='rentalType']");	
     rentalType.forEach((radio) => {
-    	console.log("이벤트리스터 등록");
         radio.addEventListener("change", (e) => {
             var current = e.currentTarget;
             if (current.getAttribute("id") === "btn_charter") {
-                showCharter();						// 월세 선택 따른 사용자 금액 입력 화면 전환
-                /* show...Free : 전/월세 입력 따서 추천 결과도 달라지므로 해당 화면 미리 block/none 전환 */
+                showCharter();	
                 showFirstCharterFee();
                 showSecondCharterFee();
                 showThirdCharterFee();
@@ -112,7 +109,6 @@ window.onload = function () {
             this.style.color = "#4690ff";
         });
 
-        // 마우스가 벗어날 때의 이벤트 처리
         yText.querySelector('a').addEventListener("mouseout", function () {
             this.style.color = "rgba(11, 94, 215, 1)";
         });
@@ -122,7 +118,6 @@ window.onload = function () {
     var c = document.getElementById("convenience_f");
     convenience.addEventListener("change", function () {
         c.innerHTML = this.value + "단계";
-        //document.getElementById("descript_convenience").innerText = "편의 " + this.value + "단계는 이러이러이러합니다."
     });
 
     // 인구밀집도 인덱스 열고 닫기
@@ -146,8 +141,8 @@ window.onload = function () {
     }
 
     // 상세보기 모달창 띄우기
-    var compBtn = document.getElementById("compBtn");		// comBtn : 거주지 추천 위한 누르는 버튼 "상세 비교"
-    compBtn.addEventListener("click", showComparison);		// comBtn 누르는 이벤트에 대해서 "showComparison" 메소드 실행.
+    var compBtn = document.getElementById("compBtn");
+    compBtn.addEventListener("click", showComparison);
 
     // 상세보기 모달창 닫기
     var modalCloseBtn = document.getElementById("modalCloseBtn");
@@ -233,6 +228,7 @@ window.onload = function () {
 
 }
 // window.onload 끝
+
 function initSafety(num) {
     var pollice_content_btn = document.getElementById("pollice_content_btn");
     var cctv_content_btn = document.getElementById("cctv_content_btn");
@@ -242,12 +238,12 @@ function initSafety(num) {
     cctv_content_btn.style.color = "#7b7b7b";
     arrest_content_btn.style.color = "#7b7b7b";
 
-    // 파출소
+
     if (num === 1) {
         pollice_content_btn.style.color = "#000";
-    } else if (num === 2) { //CCTV
+    } else if (num === 2) {
         cctv_content_btn.style.color = "#000";
-    } else { //검거율
+    } else {
         arrest_content_btn.style.color = "#000";
     }
 }
@@ -265,16 +261,16 @@ function initConv(num) {
     olive_content_btn.style.color = "#7b7b7b";
     daiso_content_btn.style.color = "#7b7b7b";
 
-    // 편의점
+
     if (num === 1) {
         convStore_content_btn.style.color = "#000";
-    } else if (num === 2) { //음식점
+    } else if (num === 2) {
         restaurant_content_btn.style.color = "#000";
-    } else if (num === 3) { //카페
+    } else if (num === 3) {
         cafe_content_btn.style.color = "#000";
-    } else if (num === 4) { //올리브영
+    } else if (num === 4) { 
         olive_content_btn.style.color = "#000";
-    } else { //다이소
+    } else { 
         daiso_content_btn.style.color = "#000";
     }
 }
@@ -325,7 +321,7 @@ function displayArea(area, population, isRecommend) {
         kakao.maps.event.addListener(polygon, 'click', function (mouseEvent) {
             var content = '<div class="info">'
                 + '<div id="info_close_wrap">'
-                + '<img src="../images/closeBtn.svg" alt="" srcset="" id="info_close_btn" onclick="infoClose()"></div>'
+                + '<img src="images/closeBtn.svg" alt="" srcset="" id="info_close_btn" onclick="infoClose()"></div>'
                 + '<div class="info_title">' + population.name + '</div><hr>'
                 + '<div class="info_rank">'
                 + '<div id="info_price_rank">'
@@ -363,16 +359,14 @@ function infoClose() {
     customOverlay.setMap(null);
 }
 
-
-/* 전/월세 선택 버튼 선택 시 실제 전/월세 입력 화면 변경 메소드 */
 // 전세 선택 시 보여줄 화면
 function showCharter() {
-    document.getElementById("charterInput").style.display = "block";		// 전세금(최대)
-    document.getElementById("monthlyInput").style.display = "none";		// 보증금(최대)
-    document.querySelector(".select_need").style.height = "180px";			// 입력창 높이 조정 (전세금/월세금 입력 높이 상이)
+    document.getElementById("charterInput").style.display = "block";	
+    document.getElementById("monthlyInput").style.display = "none";	
+    document.querySelector(".select_need").style.height = "180px";
 
-    document.querySelector('input[name="monthlyDeposit"]').value = "";	// 보증급 입력 창 숨기기
-    document.querySelector('input[name="monthlyMonth"]').value = "";	// 월세 입력창 숨기기
+    document.querySelector('input[name="monthlyDeposit"]').value = "";	
+    document.querySelector('input[name="monthlyMonth"]').value = "";
 }
 
 // 월세 선택 시 보여줄 화면
@@ -398,16 +392,8 @@ function showRecommend() {
     document.getElementById("recommend_third_info").style.display = "none";
 }
 
-// 사용자가 전/월세 금액 입력 후 버튼 "추천 결과 확인" 클릭 실행, 입력한 금액에 대해 상/하한선 alert 띄우기.
-//전세 / 보증금,월세 상/하한선 alert 띄우기
 
 function resultCheck() {
-	
-	/* 순서대로 각 변수 내용 :
-	 * 	1. input_charter : 사용자가 입력한 전세금을 가져오기 위해 input 태그인 name="charterDeposit"을 가져온 변수 
-	 *  2. input_deposit : 사용자가 입력한 월세 보증금을 가져오기 위해 input 태그인 name="monthlyDeposit"을 가져온 변수 
-	 *  3. input_monthly : 사용자가 입력한 월세금을 가져오기 위해 input 태그인 name="monthlyDeposit"을 가져온 변수 */
-	 
     var input_charter = document.getElementById("charterInput").querySelector('input[name="charterDeposit"]');
     var input_deposit = document.getElementById("monthlyInput").querySelector('input[name="monthlyDeposit"]');
     var input_monthly = document.getElementById("monthlyInput").querySelector('input[name="monthlyMonth"]');
@@ -415,20 +401,18 @@ function resultCheck() {
     console.log(input_deposit.value);
     console.log(input_monthly.value);
 
-    /* 전세금 확인 : 월세 보증금이나 월세금을 입력하지 않았을 때 실행. */
     if (input_deposit.value == "" || input_monthly.value == "") {
-        if (input_charter.value == "") {		// 전세금 입력하지 않았으면 실행.
+        if (input_charter.value == "") {
             alert("입력되지 않은 정보가 있습니다.");
         }
-        else if (input_charter.value < 15000 || input_charter.value > 30000) {		// 전세금 상/하한성 벗어날 시 실행.
+        else if (input_charter.value < 15000 || input_charter.value > 30000) {
             alert("전세금의 입력 상하한선은 15000 ~ 30000 입니다.");
         }
         else {
             showResult();
         }
     }
-    
-    /* 월세 확인 : 위와 동일.  */
+
     else if (input_charter.value == "") {
         if (input_deposit.value == "" && input_monthly.value == "") {
             alert("입력되지 않은 정보가 있습니다.");
@@ -446,8 +430,6 @@ function resultCheck() {
 }
 
 function showResult() {
-	
-	/* DOM 조작 : 사용자의 거주치 추천 위한 입력 정보(전/월세 선택, 금액, 편의성 및 안정성 비중 선택)에 대한 모든 HTML 태그를 보이지 않음. */
     document.getElementById("recommend_first").style.display = "none";
     document.getElementById("recommend_first_info").style.display = "block";
     document.getElementById("recommend_second").style.display = "none";
@@ -458,27 +440,19 @@ function showResult() {
     document.getElementById("user-input").style.display = "none";
     document.getElementById("recommend_result_page").style.display = "block";
 
-    /* 선택된 지역구 왜 추천하는지에 대한 정보를 보여주는 페이지를 보이기 위한 작업. */
-    var chart_info = document.querySelector("#chart_information");			// 선택된 지역구 왜 추천하는지에 대한 정보를 보여주는 section
-    var func = document.querySelector("#btn");								// 페이지 열고 닫는 버튼 표현한 div
+    var chart_info = document.querySelector("#chart_information");	
+    var func = document.querySelector("#btn");
 
     chart_info.style.zIndex = "1";
-    chart_info.style.left = "333px";			// 해당 section 보이기.
+    chart_info.style.left = "333px";
 
     if (chart_info.style.left === '333px') {
         func.style.left = "662px";
-        func.innerText = "◀";					// 해당 section 보여짐에 따라 열림 버튼 아닌 닫는 버튼으로 표현.
+        func.innerText = "◀";
     }
 
 
     // 거주지 추천 ajax to servlet
-    
-    /* 순서대로 각 변수 내용 :
-	 * 	1. charter_avg : 사용자가 입력한 전세금을 가져오기 위해 input 태그인 name="charterDeposit"을 가져온 변수 
-	 *  2. deposit_avg : 사용자가 입력한 월세 보증금을 가져오기 위해 input 태그인 name="monthlyDeposit"을 가져온 변수 
-	 *  3. monthly_avg : 사용자가 입력한 월세금을 가져오기 위해 input 태그인 name="monthlyDeposit"을 가져온 변수
-	 *  4. safe_score  : 사용자가 입력한 안전 점수 비중치.
-	 *  5. cvt_socre   : 사용자가 입력한 편의 점수 비중치 */
     const charter_avg = $('#charterInput input[name="charterDeposit"]').val();
     const deposit_avg = $('#monthlyInput input[name="monthlyDeposit"]').val();
     const monthly_avg = $('#monthlyInput input[name="monthlyMonth"]').val();
@@ -494,16 +468,16 @@ function showResult() {
     /* 월세 관련 요청 */
     $.ajax({
         url: '../RecServiceController/monthly',
-        type: 'POST',						/* 전송 TYPE : TEXT */
-        contentType: 'application/json',	/* JSON 데이터 전송 */
+        type: 'POST',			
+        contentType: 'application/json',
         data : JSON.stringify({
-            deposit_avg: deposit_avg,			// 월세 보증금
-            monthly_avg: monthly_avg,		// 월세금
-            safe_score: safe_score,				// 안전 점수 비중치
-            cvt_score: cvt_score					// 편의 점수 비중치
+            deposit_avg: deposit_avg,
+            monthly_avg: monthly_avg,
+            safe_score: safe_score,		
+            cvt_score: cvt_score		
         }),
         success: function (data) {
-            displayMonthly(data);		 /* 사용자가 입력한 금액 등의 기준으로 3개 구를 알려주는 HTML 태그 내 표현할 데이터들 */
+            displayMonthly(data);
             showMap(data);
             chart(data);
             chart_update(data);
@@ -519,13 +493,12 @@ function showResult() {
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
-            charter_avg: charter_avg,		// 전세금
-            safe_score: safe_score,			// 안전 점수 비중치
-            cvt_score: cvt_score				// 편의 점수 비중치
+            charter_avg: charter_avg,
+            safe_score: safe_score,		
+            cvt_score: cvt_score	
         }),
-        success: function (data) {			/* 정상적인 응답 일 시 응답 데이터인 추천 거주지 지역구 데이터.
-        								    			(String으로 반환된 Json 데이터) */
-            displayCharter(data);				// 사용자가 데이터 입력 후 버튼 "추천결과확인" 버튼 눌러서 보여지는 거주치 추천 결과(지역구3개) 데이터를 section 내 보여지는 함수. 
+        success: function (data) {	
+            displayCharter(data);	
             showMap(data);
             chart(data);			// chart.js 그리기
             chart_update(data);
@@ -536,90 +509,77 @@ function showResult() {
     });
 
     // 거주지 추천 결과 데이터 보여주는 부분.
-    var orders = ["first", "second", "third"];		// 사용자가 버튼 "추천결과확인" 하여 보여지는 추천 지역구 3개에 대한 정보를 HTML에 표현하기 위한 함수.
+    var orders = ["first", "second", "third"];	
 
-    /* 거주치 추천 결과를 전세 기준으로 보여준다. */
-    function displayCharter(data) {		// DB 조회 결과인 추천 지역구 3개에 대한 Json 데이터를 String 형으로 가져온 것.
+    function displayCharter(data) {	
         console.log("전세 함수 실행");
-        for (var i = 0; i < data.length; i++) {
-        	
-        	/* 결과 페이지 중 "거주지 추천" 부분(추천 지역구 3개 구 표현 부분(간소화 항목)) section 내 실제 조회된 3개의 각 구 이름을 HTML 태그 내 표현. */
-            var recommend_result = "recommend_" + orders[i] + "_result";							// recommend_first_result , recommend_second_result ..
+        for (var i = 0; i < data.length; i++) {       	
+            var recommend_result = "recommend_" + orders[i] + "_result";				
             document.getElementById(recommend_result).innerText = data[i].gu_name;
             console.log(data[i].gu_name);
 
-            /* 결과 페이지 중 "거주지 추천"의 우측 패널 중 1등 구의 이름을 표현하는 태그 설정. */
             var chart_name = document.querySelectorAll(".chart_name");
             for (var j = 0; j < chart_name.length; j++) {
                 chart_name[j].innerText = data[0].gu_name;
             }
 
-            var chart_safe_rank = document.getElementById("chart_safe_rank");  // "거주지 추천"의 우측 패널 내용 중 "안전" 순위 숫자 부분.
-            var chart_conv_rank = document.getElementById("chart_conv_rank");  // "거주지 추천"의 우측 패널 내용 중 "편의" 순위 숫자 부분.
-            var gu_info_review = document.getElementById("gu_review");		   // 해당 구의 단순 리뷰 적는 부분
-            for (var j = 0; j < populationArea.length; j++) {				   // window.onload = function() 에서 초기화 완료.
-                
-            	/* 미리 초기화 해둔 각 구별 안전성/편의성 등급 및 리뷰 정보를 가지고 현재 추천된 지역구 3개 중 1등 구와 이름이 동일하면 HTML 내 해당 리뷰 정보 표현. */
+            var chart_safe_rank = document.getElementById("chart_safe_rank");  
+            var chart_conv_rank = document.getElementById("chart_conv_rank");
+            var gu_info_review = document.getElementById("gu_review");
+            for (var j = 0; j < populationArea.length; j++) {
             	if (data[0].gu_name == populationArea[j].name) {
-                    chart_safe_rank.innerText = populationArea[j].safe_rank;	// 안전 등급
-                    chart_conv_rank.innerText = populationArea[j].conv_rank;	// 편의 등급
-                    gu_info_review.innerText = populationArea[j].gu_review;		// 해당 지역구 리뷰.
+                    chart_safe_rank.innerText = populationArea[j].safe_rank;	
+                    chart_conv_rank.innerText = populationArea[j].conv_rank;	
+                    gu_info_review.innerText = populationArea[j].gu_review;	
                 }
             }
 
-            /* 결과 페이지 중 "거주지 추천" 부분(추천 지역구 3개 구 표현 부분(detail 부분)) 표현,
-             * orders[i] 내 first,second, third 따라 각 별도의 HTML 태그 선택하여 각 태그 내 정보 표현.
-             * 각 HTML 태그에 표현되는 값은 ajax 결과로 반환된 DB 테이블 "gu_info" 정보에서 가져온 것. */
-            var recommend_detail = recommend_result + "_detail";	// 3개 구에 대해 반복하면서 각 구 이름을 표현(recommend_first_result_detail ...)
+            var recommend_detail = recommend_result + "_detail";	
             document.getElementById(recommend_detail).innerText = data[i].gu_name;
 
-            var select_charter = orders[i] + "_charter_fee";		// 3개 구에 대해 반복하면서 평균 전세금 표현(first_charter_fee..)
+            var select_charter = orders[i] + "_charter_fee";	
             document.getElementById(select_charter).innerText = data[i].charter_avg;
 
-            var select_deposit = orders[i] + "_deposit_fee";		// 3개 구에 대해 반복하면서 평균 월세 보증금 표현(first_deposit_fee..)
+            var select_deposit = orders[i] + "_deposit_fee";	
             document.getElementById(select_deposit).innerText = data[i].deposit_avg;
 
-            var select_monthly = orders[i] + "_monthly_fee";		// 3개 구에 대해 반복하면서 평균 월세금 표현(first_monthly_fee)
+            var select_monthly = orders[i] + "_monthly_fee";	
             document.getElementById(select_monthly).innerText = data[i].monthly_avg;
 
-            var safety_value = "safety_" + orders[i] + "_value";	// 3개 구에 대해 반복하면서 안전성 점수 표현.
+            var safety_value = "safety_" + orders[i] + "_value";	
             document.getElementById(safety_value).innerText = "\u00a0" + data[i].safe_score;
 
-            var conv_value = "conv_" + orders[i] + "_value";		// 3개 구에 대해 반복하면서 편의 점수 표현.
+            var conv_value = "conv_" + orders[i] + "_value";	
             document.getElementById(conv_value).innerText = "\u00a0" + data[i].cvt_score;
 
-            var safety_graph = "safety_" + orders[i] + "_graph";	/* 3개 구에 대해 반복하면서 안전성 그래프 정보를 안전성 점수 따라 "div" style를
-            															변경함으로써 표현 safety_second_graph */ 
+            var safety_graph = "safety_" + orders[i] + "_graph";	 
             document.getElementById(safety_graph).style.width = data[i].safe_score * 2 - 10 + "px";
 
-            var conv_graph = "conv_" + orders[i] + "_graph";		/* 3개 구에 대해 반복하면서 편의성 그래프 정보를 안전성 점수 따라 "div" style를
-																		변경함으로써 표현 safety_second_graph */ 
+            var conv_graph = "conv_" + orders[i] + "_graph";
             document.getElementById(conv_graph).style.width = data[i].cvt_score * 2 - 10 + "px";
         }
     }
 
-	/* 사용자가 입력한 금액 등의 기준으로 3개 구를 알려주는 HTML 태그 내 표현할 데이터들 */
-    /* 거주치 추천 결과를 월세 기준으로 보여준다. */
-    function displayMonthly(data) {				// data : 스프링 사용하여 DB에서 가져온 데이터.
+    function displayMonthly(data) {		
         console.log("월세 함수 실행");
         for (var i = 0; i < data.length; i++) {
-            var recommend_result = "recommend_" + orders[i] + "_result";			// ["first", "second", "third"];
-            document.getElementById(recommend_result).innerText = data[i].gu_name;			// 이름 표현.
+            var recommend_result = "recommend_" + orders[i] + "_result";	
+            document.getElementById(recommend_result).innerText = data[i].gu_name;		
             console.log(data[i].gu_name);
 
-            var chart_name = document.querySelectorAll(".chart_name");	/* 선택 된 3개 구 중 가장 추천 해주는 패널 내 구 이름 표현 태그*/
-            for (var j = 0; j < chart_name.length; j++) {						/* 해당 패널 내 구 입력하는 태그가 복수 개 이므로 반복하여 표현. */
+            var chart_name = document.querySelectorAll(".chart_name");	
+            for (var j = 0; j < chart_name.length; j++) {	
                 chart_name[j].innerText = data[0].gu_name;
             }
 
-            var chart_safe_rank = document.getElementById("chart_safe_rank");		/* 해당 패널에서의 안전 순위 표현 태그. */
-            var chart_conv_rank = document.getElementById("chart_conv_rank");		/* 해당 패널에서의 편의 순위 표현 태그 */
-            var gu_info_review = document.getElementById("gu_review");				/* 해당 패널에서의 리뷰 표현 태그 */
-            for (var j = 0; j < populationArea.length; j++) {								/* pupulationAraea : 미리 각 구별 리뷰, 안전과 편의 순위 에 대한 static 데이터. */
+            var chart_safe_rank = document.getElementById("chart_safe_rank");	
+            var chart_conv_rank = document.getElementById("chart_conv_rank");
+            var gu_info_review = document.getElementById("gu_review");			
+            for (var j = 0; j < populationArea.length; j++) {		
                 if (data[0].gu_name == populationArea[j].name) {							
-                    chart_safe_rank.innerText = populationArea[j].safe_rank;				/* 해당 구에 대한 안전 순위 표현 */
-                    chart_conv_rank.innerText = populationArea[j].conv_rank;			/* 해당 구에 대한 편의 순위 표현 */
-                    gu_info_review.innerText = populationArea[j].gu_review;				/* 해당 구에 대한 구 리뷰 표현 */
+                    chart_safe_rank.innerText = populationArea[j].safe_rank;		
+                    chart_conv_rank.innerText = populationArea[j].conv_rank;		
+                    gu_info_review.innerText = populationArea[j].gu_review;		
                 }
             }
 
@@ -650,7 +610,6 @@ function showResult() {
     }
     
     // chart.js
-    /* 안전 점수 요인과 편의 시설 요인을 동시에 실행. */
     function chart(data) {
         if (data && data.length > 0) {
             updateChart('policeOfficeChart', ['구 평균 파출소', '파출소'], [23, data[0].police_office], ['#0b5dd7ac', '#0b5dd7']);
@@ -899,34 +858,27 @@ function showThirdMonthlyFee() {
 }
 
 
-// 거주치 추천 정보 입력 따른 3개 구를 별도로 보여주고 상세 비교하는 할 수 있는 ui 창 띄울 수 있는 버튼 제공. (현재 매개변수 selMenu로 이벤트 객체를 받지 않으며 쓰이지 않음) 
 function showComparison(selMenu) {
-	/* check_first/second/third : 데이터 입력 따른 거주지 추천 3개 구의 각 이름 항목 태그 */
     var check_first = document.getElementById("check_first");
     var check_second = document.getElementById("check_second");
     var check_third = document.getElementById("check_third");
 
-    /* 각 3개 구를 1개 이상 선택해서 선택한 구 별로 비교해서 보여주기 위함. check.checked 는 check 박스가 선택되어 있는지 확인하는 html 속성, (<input type="checkbox") */
     var isChecked = [check_first.checked, check_second.checked, check_third.checked];
     var cnt = 0;
 
-    /* check 박스 값이 true 라면 cnt 개수 추가 */
     isChecked.forEach(e => {
         if (e) {
             cnt++;
         }
     });
     
-    /* increaseLeft : 선택된 비교하는 구 개수 에 따라 각 구 그래프 들이 각 화면에서 차지해야 될 넓이를 계산.
-     				      이 설정이 없다면 모달 페이지 바깥으로 그래프 표현됨.*/
     var increaseLeft = 100 / cnt;
     
     //선택된 구 개수에 따라서 그래프 내 요소들 정렬
     if (cnt == 0) {
         alert("1개 이상의 구를 선택해주세요");
         return;
-        
-    /* 아래 else if 문들 지워도 동작 차이 없음. */
+
     } else if (cnt == 1) {
         $(".graph_bar").each((index, element) => {
             element.style.left = "48.7%";
@@ -940,9 +892,7 @@ function showComparison(selMenu) {
             element.style.left = "46.5%";
         });
     }
-    
-	/* $("#recommend_first_result").text() : 3개 구에 대해서 정보를 표현할 때 각각의
-	 * "1번.지역명"..2번 지역명..으로 표현하는 span 태그 텍스트 내용 가져오기 */
+
     var recommend_first_name = $("#recommend_first_result").text();
     var recommend_second_name = $("#recommend_second_result").text();
     var recommend_third_name = $("#recommend_third_result").text();
@@ -953,7 +903,7 @@ function showComparison(selMenu) {
     // 체크박스 선택에 따른 동적 화면 변경
     var preLeft = -increaseLeft;
     for (var i = 0; i < 3; i++) {
-        var wraps = document.querySelectorAll("." + orders[i] + "_wrap");		//  ["first", "second", "third"];
+        var wraps = document.querySelectorAll("." + orders[i] + "_wrap");	
 
         if (isChecked[i]) {
             preLeft += increaseLeft;

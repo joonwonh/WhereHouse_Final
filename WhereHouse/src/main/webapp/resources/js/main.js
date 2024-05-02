@@ -24,14 +24,12 @@ window.onload = function () {
     //menu_detail_icon.addEventListener("click", () => clickMenu(3));
     menu_board_icon.addEventListener("click", () => clickMenu(3));
 	
-	// 각 아이콘 클릭 시 화면 전환, 순서대로 거주지 추천, 지역구 지도, 상세 지도, 게시판을 클릭하여 스프링에 요청
     function clickMenu(sel) {
    		menu_suggest_icon.style.backgroundColor = "rgba(11, 94, 215, 1)";
         menu_gu_icon.style.backgroundColor = "rgba(11, 94, 215, 1)";
         //menu_detail_icon.style.backgroundColor = "rgba(11, 94, 215, 1)";
         menu_board_icon.style.backgroundColor = "rgba(11, 94, 215, 1)";
 
-		/* iframeSection.src 변경 : src 속성이 변경되면 브라우저가 해당 요청을 서버에게 전달하고 서프링에게 전달되어 요청을 처리한다. */
         if (sel === 1) {
             menu_suggest_icon.style.backgroundColor = "rgba(34, 34, 34, 0.3)";
             iframeSection.src = "/wherehouse/page/houserec";

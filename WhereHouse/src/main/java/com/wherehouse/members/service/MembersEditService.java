@@ -22,10 +22,10 @@ public class MembersEditService implements IMembersEditService{
 		editParameters[1] = httpRequest.getParameter("nickname");
 		editParameters[2] = httpRequest.getParameter("tel");
 		editParameters[3] = httpRequest.getParameter("email");
-		editParameters[4] = Integer.parseInt(httpRequest.getParameter("id"));
+		editParameters[4] = httpRequest.getParameter("id");
 		
 		int result = (Integer) membersRepository.editMember(editParameters);
-		System.out.println("result : " + result);
+//		System.out.println("result : " + result);
 		return result; 
 	}
 

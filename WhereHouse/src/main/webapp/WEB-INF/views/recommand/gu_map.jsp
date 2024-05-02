@@ -115,11 +115,10 @@
                     <span>핫플레이스</span>
                     <hr class="gu_name_hr">
                 </div>
-                <!-- == Bootstrap 캐러셀 -->
                 <div id="carousel-hotplace" class="carousel slide col-xs-1 col-xs-offset-1" data-ride="carousel"
-                    data-interval="3000">		<!-- class="carousel slid" : .slide, 부드럽게 전환. -->
-                    <div class="carousel-inner">		<!-- 캐러셀 아이템을 담는 컨테이너 정의, -->
-                        <div class="item active">		<!-- 캐러셀 item을 정의, item active는 캐러셀 아이템 중 맨처음 보여질 이미지 -->
+                    data-interval="3000">	
+                    <div class="carousel-inner">	
+                        <div class="item active">	
                             <img id="carousel-img1" src="" alt="메인이미지" srcset="" class="col-xs-12">
                             <div class="carousel-caption ms-5" id="carousel-caption1">
                             </div>
@@ -136,7 +135,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- 캐러셀 == -->
             </div>
             <div id="logo-img"><img src="../images/home_icon.png" alt=""></div>
         </aside>

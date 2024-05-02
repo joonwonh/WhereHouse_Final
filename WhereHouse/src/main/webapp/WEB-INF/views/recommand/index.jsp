@@ -37,62 +37,50 @@
                 <body class="bg-light">
 
                     <!-- 네비 바 -->
-                    <header>
-                        <nav class="navbar navbar-expand-lg fixed-top bg-light border-bottom">
-                            <div class="container-fluid">
-                                <a id="logo" class="navbar-brand ms-4 py-3" href="/wherehouse">Where House</a>	<!-- 별도 스프링 컨트롤러 거치치 않고 바로 컨텍스트 요청 실행. -->
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse justify-content-end me-4" id="navbarScroll">
-                                    <ul class="navbar-nav navbar-nav-scroll" style="--bs-scroll-height: 300px;">
-
-                                        <li class="nav-item ">
-                                           <a class=" nav-link me-5" id="nav_btn_house_rec" href="/wherehouse/page/main"
-                                                role="button" >
-                                                거주지 추천
-                                            </a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle me-5" id="nav_btn_gu_map" href="#"
-                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                지도
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-end me-4 text-end"
-                                                id="nav_btn_gu_map_dropdown">
-                                                <li><a class="dropdown-item nav_choose" href="./page/main" id="gu_btn">지역구 지도</a>
-                                                </li>
-                                                <li><a class="dropdown-item nav_choose" href="./page/main" id="detail_btn">상세 지도</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class=" nav-link dropdown-toggle me-5" id="nav_btn_data_script" href="/wherehouse/page/reinfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">데이터 분석</a>
-                                            <ul class="dropdown-menu me-3 dropdown-menu-end text-end nav_btn_house_rec_dropdown" id="">
-                                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo">분석 적용 방식 페이지</a></li>
-                                                <hr id="navbar_hr">
-                                                <li><a class="dropdown-item nav_choose"
-                                                        href="/wherehouse/page/reinfo#first_page">생활 안전
-                                                        관련</a></li>
-                                                <li><a class="dropdown-item nav_choose"
-                                                        href="/wherehouse/page/reinfo#second_page">생활
-                                                        편의
-                                                        관련</a></li>
-                                                <li><a class="dropdown-item nav_choose"
-                                                        href="/wherehouse/page/reinfo#third_page">가격
-                                                        관련</a></li>
-                                                <li><a class="dropdown-item nav_choose"
-                                                        href="/wherehouse/page/reinfo#fourth_page">추천
-                                                        결과
-                                                        관련</a></li>
-                                                <li><a class="dropdown-item nav_choose"
-                                                        href="/wherehouse/page/reinfo#fifth_page">인구
-                                                        밀집도
-                                                        관련</a></li>
-                                            </ul>
-                                        </li>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light border-bottom">
+            <div class="container-fluid">
+                <a id="logo" class="navbar-brand ms-4 py-3" href="/wherehouse">Where House</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end me-4" id="navbarScroll">
+                    <ul class="navbar-nav navbar-nav-scroll" style="--bs-scroll-height: 300px;">
+                        <li class="nav-item ">
+                            <a class=" nav-link me-5" id="nav_btn_house_rec" href="/wherehouse/page/main" role="button">
+                                거주지 추천
+                            </a>
+                        </li>
+                       <li class="nav-item ">
+                            <a class=" nav-link me-5"  id="nav_btn_gu_map" href="./page/main" role="button">
+                                지도
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class=" nav-link dropdown-toggle me-3" id="nav_btn_data_script" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                데이터 분석
+                            </a>
+                            <ul class="dropdown-menu me-5 dropdown-menu-end text-end nav_btn_house_rec_dropdown" id="">
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo">분석 적용 방식 페이지</a>
+                                </li>
+                                <hr id="navbar_hr">
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#first_page">생활 안전
+                                        관련</a></li>
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#second_page">생활
+                                        편의
+                                        관련</a></li>
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#third_page">가격
+                                        관련</a></li>
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#fourth_page">추천
+                                        결과
+                                        관련</a></li>
+                                <li><a class="dropdown-item nav_choose" href="/wherehouse/page/reinfo#fifth_page">인구
+                                        밀집도
+                                        관련</a></li>
+                            </ul>
+                        </li>
 
                                         <li class="nav-item dropdown">
                                             <a class=" nav-link dropdown-toggle me-" id="nav_btn_house_rec" href="#"
@@ -507,66 +495,71 @@
                     <!-- <footer class="text-center mt-5">-->
 
                     <footer>
-                        <div class="container">
-                            <footer class="py-5 border-top border-secondary border-opacity-50 mt-5">
-                                <div class="row">
-                                    <div id="" class="footer_text col-md-4 mb-3 text-left">
+					   <div class="container">
+					        <footer class="py-5 border-top border-secondary border-opacity-50 mt-5">
+					            <div class="row">
+					                <div id="" class="footer_text col-md-4 mb-3 text-left">
 					                    <h4 class="mb-4 ms-4">Contact</h4>
 					                    <ul class="nav-flex-column">
 					                        <div class="nav-item mb-2">
 					                            <a class="nav-link p-0 text-muted">
 					                                <i class="bi bi-geo-alt-fill">
-					                                    서울시 서대문구 증가로
+					                                    서울시 은평구 연서로
 					                                </i>
 					                            </a>
 					                        </div>
 					                        <div class="nav-item mb-2">
 					                            <a class="nav-link p-0 text-muted">
 					                                <i class="bi bi-telephone-fill">
-					                                	팀장 이재서 : 010-4130-1998<br>
-					                                    &nbsp;&nbsp;&nbsp;&nbsp;
-					                                    조원 정범진 : 010-3370-7750
+														010-2794-0796
 					                                </i>
 					                            </a>
 					                        </div>
 					                        <div class="nav-item mb-2">
-					                            <a class="nav-link p-0 text-muted" href="https://github.com/joonwonh/WhereHouse"
+					                            <a class="nav-link p-0 text-muted">
+					                                <i class="bi bi-envelope-fill">
+					                                    joonwon24@gmail.com
+					                                </i>
+					                            </a>
+					                        </div>
+					                        <div class="nav-item mb-2">
+					                            <a class="nav-link p-0 text-muted" href="https://github.com/joonwonh"
 					                                target="_blank">
 					                                <i class="bi bi-github">
-					                                    github.com/N0WST4NDUP/WhereHouse-2
+					                                    github.com/joonwonh
 					                                </i>
 					                            </a>
 					                        </div>
 					                    </ul>
 					                </div>
-
-                                    <div id="" class="footer_text col-md-4 mb-3 text-left">
+					
+					                <div id="" class="footer_text col-md-4 mb-3 text-left">
 					                    <h4 class="mb-4 ms-4">Our Project Plan</h4>
 					                    <ul class="nav-flex-column">
 					                        <div class="nav-item mb-2">
 					                            <a class="nav-link p-0 text-muted"
-					                                href="https://github.com/N0WST4NDUP/WhereHouse-2/tree/main/1.%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%ED%9A%8D%EC%84%9C"
+					                                href=""
 					                                target='_blank'>
 					                                Project Plan pres.
 					                            </a>
 					                        </div>
 					                        <div class="nav-item mb-2">
 					                            <a class="nav-link p-0 text-muted"
-					                                href="https://github.com/N0WST4NDUP/WhereHouse-2/tree/main/2.%EA%B0%9C%EB%B0%9C%EA%B3%84%ED%9A%8D%EC%84%9C"
+					                                href=""
 					                                target='_blank'>
 					                                Develop Plan
 					                            </a>
 					                        </div>
 					                        <div class="nav-item mb-2">
 					                            <a class="nav-link p-0 text-muted"
-					                                href="https://github.com/N0WST4NDUP/WhereHouse-2/tree/main/3.%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EC%A0%95%EC%9D%98%EC%84%9C_%EB%B6%84%EC%84%9D%EC%84%9C"
+					                                href=""
 					                                target='_blank'>
 					                                Function Specification
 					                            </a>
 					                        </div>
 					                        <div class="nav-item mb-2">
 					                            <a class="nav-link p-0 text-muted"
-					                                href="https://github.com/N0WST4NDUP/WhereHouse-2/tree/main/4.%ED%99%94%EB%A9%B4%20%EC%84%A4%EA%B3%84%EC%84%9C"
+					                                href=""
 					                                target='_blank'>
 					                                Wire Frame
 					                            </a>
