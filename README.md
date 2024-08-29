@@ -17,11 +17,20 @@
 
 | **한준원** | **이재서** | **정범진**
 | :------: |  :------: | :------: |
-| [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @yeon1615](https://github.com/yeon1615) | [<img src="https://avatars.githubusercontent.com/u/112460466?v=4" height=150 width=150> <br/> @Cheorizzang](https://github.com/Cheorizzang) | [<img src="https://avatars.githubusercontent.com/u/112460506?v=4" height=150 width=150> <br/> @heejiyang](https://github.com/heejiyang) |
+| [<img src="https://avatars.githubusercontent.com/u/96328871?v=4" height=150 width=150> <br/> @joonwonh](https://github.com/joonwonh) | [<img src="https://avatars.githubusercontent.com/u/153244723?v=4" height=150 width=150> <br/> @N0WST4NDUP](https://github.com/N0WST4NDUP) | [<img src="https://avatars.githubusercontent.com/u/85886967?v=4" height=150 width=150> <br/> @JungRepository](https://github.com/JungRepository) |
 
 </div>
 
 ## 역할 분담
+<br/>
+[팀장] 한준원
+
+<br/>
+[팀원] 이재서
+
+<br/>
+[팀원] 정범진
+
 
 ## 개발 기간 
 
