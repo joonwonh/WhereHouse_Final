@@ -34,17 +34,33 @@
 
 
 ## 개발 기간 
-2023.11.13 ~ 2023.11.27 : 프로젝트 기획
-2023.11.28 ~ 2023.12.10 : UI 개발
-2023.12.11 ~ 2023.12.24 : 데이터 수집 및 전처리
-2024.01.15 ~ 2024.02.02 : JSP & Servlet을 이용한 웹 개발
-2024.02.24 ~ 2024.04.19 : 전체 UI 수정 및 Spring으로 전환 후 배포
+**2023.11.13 ~ 2023.11.27 :** 프로젝트 기획
+
+**2023.11.28 ~ 2023.12.10 :** UI 개발
+
+**2023.12.11 ~ 2023.12.24 :** 데이터 수집 및 전처리
+
+**2024.01.15 ~ 2024.02.02 :** JSP & Servlet을 이용한 웹 개발
+
+**2024.02.24 ~ 2024.04.19 :** 전체 UI 수정 및 Spring으로 전환 후 배포
+
 ## 프로젝트 구조
 
 ## 페이지 별 기능
+https://github.com/user-attachments/assets/e3e57e44-1b4e-425c-975a-307536b44aca
+
+https://github.com/user-attachments/assets/a3373215-c366-4cd3-b375-aad940907afd
+
+https://github.com/user-attachments/assets/2c4c4c41-92f9-441f-9089-529284b7373c
+
+https://github.com/user-attachments/assets/3af2643d-81c5-44bc-a0f5-43db42ffbdd0
+
+https://github.com/user-attachments/assets/4827c92d-84d6-4d0d-a94c-6ffbb23ce239
+
+https://github.com/user-attachments/assets/805e5c5a-c948-458a-9327-3148186f394b
 
 ## 배포
-(현재 배포 중단으로 인한 시연 영상으로 대체(240530)
+(배포 중단 : 2024.05.30)
 
 ## 개선 목표
 
